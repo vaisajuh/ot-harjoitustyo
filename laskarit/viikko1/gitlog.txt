@@ -1,0 +1,113 @@
+commit 745f9d9cdc1c1c13c4bedeb121fc2c9500b6c3fe
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:48:50 2021 +0200
+
+    jees
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5b12f8ea932638092ab9a333c9aaede65e589a8b
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:42:50 2021 +0200
+
+    Treeni
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 2c42d51953b3e85113704fb44ccc566b842818df
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:24:49 2021 +0200
+
+    Add -p
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 9d2752cc8396a086fb6135d0c3ed795e52c19f5a
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:17:27 2021 +0200
+
+    eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit aa20c13f8d1f684c50b2e8bcf823ea4a28f8a1ef
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:15:40 2021 +0200
+
+    Poista toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 48f67d72e23d00ef4402d1229564ea5fa082c8bb
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:10:38 2021 +0200
+
+    Poista ja paljon
+
+ tiedosto.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e44ac87e9635753bfcf6531472a0c9d555693d2f
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:09:11 2021 +0200
+
+    Paljon
+
+ tiedosto.txt | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+commit 6e095e84d95c1fbef3ca86f17c0a6261d3de5182
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 22:01:43 2021 +0200
+
+    stuff/
+
+ stuff/stuff.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit cdabf4fd2b3b896cde9e8539207c0946ca602277
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 21:59:20 2021 +0200
+
+    toinen ja kolmas
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit d032acc8d2aadfddf90a21e3012fc996222e00ba
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 21:57:35 2021 +0200
+
+    kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ed6b7f633e09cca2af77a40aa07fca40c2d22631
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 21:53:38 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit d374627240ddb740dd57d8222d05bdf7bf55f3fe
+Author: vaisajuh <juha.vaisanen@gmail.com>
+Date:   Mon Nov 1 21:49:51 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
