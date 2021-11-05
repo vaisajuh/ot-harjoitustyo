@@ -1,4 +1,5 @@
-commit 745f9d9cdc1c1c13c4bedeb121fc2c9500b6c3fe 
+vaisajuh@Tietokone:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit 745f9d9cdc1c1c13c4bedeb121fc2c9500b6c3fe
 Author: vaisajuh <juha.vaisanen@gmail.com>
 Date:   Mon Nov 1 22:48:50 2021 +0200
 
@@ -111,3 +112,4 @@ Date:   Mon Nov 1 21:49:51 2021 +0200
 
  tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
+
