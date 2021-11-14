@@ -11,6 +11,7 @@ Sovelluksen tarkoitukena on tallentaa yhteystietoja tietokantaan. Jokaisella kir
 - Käyttäjä voi luoda uuden yhteystiedon
   - Tämä sisältää yhteystiedon nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
 - Käyttäjä voi poistaa yhteystiedon
+- Käyttäjä voi muokata yhteystietoa
 - Käyttäjä voi halutessaan kirjautua ulos järjestelmästä
 ## Ideoita sovelluksen laajentamiseen jatkossa
 - 
