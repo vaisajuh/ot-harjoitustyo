@@ -8,4 +8,5 @@
 [Unicafe](https://github.com/vaisajuh/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe) <br>
 [Coverage report](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/laskarit/viikko2/Coverage_report.png)
 ### Dokumentaatio
-[Vaatimusmäärittely](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md) <br>
+[Tuntikirjanpito](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
