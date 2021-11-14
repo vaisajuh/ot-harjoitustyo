@@ -1,7 +1,7 @@
 ## Työaikakirjanpito
 <table>
   <tr>
-    <th>päivä</th>
+    <th>päivämäärä</th>
     <th>käytetty aika</th>
     <th>mitä tehty</th>
   </tr>
