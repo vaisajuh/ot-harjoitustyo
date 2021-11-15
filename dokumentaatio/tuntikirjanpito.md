@@ -1,12 +1,28 @@
 ## Työaikakirjanpito
 <table>
   <tr>
-    <th>päivämäärä</th>
-    <th>käytetty aika</th>
-    <th>mitä tehty</th>
+    <th>Päivämäärä</th>
+    <th>Käytetty aika</th>
+    <th>Mitä tehty</th>
+  </tr>
+  <tr>
+    <td>15.11</td>
+    <td>3</td>
+    <td>Suunnittelua</td>
   </tr>
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
 </table>
