@@ -1,8 +1,9 @@
 # Vaatimusmäärittely
 ## Sovelluksen tarkoitus
-Sovelluksen tarkoitukena on tallentaa yhteystietoja tietokantaan. Jokaisella kirjautuneella käyttäjällä oma henkilökohtainen lista yhteystiedoista.
+Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella kirjautuneella käyttäjällä oma henkilökohtainen lista yhteystiedoista.
 ## Käyttöliittymäluonnos
-Kirjautumisen jälkeen sovellukseen aukeaa uusi näkymä, jossa on sovelluksen toiminnallisuus. Sovelluksessa on yhteensä neljä näkymää <br>
+Kirjautumisen jälkeen sovellukseen aukeaa uusi näkymä, jossa on sovelluksen toiminnallisuus. Sovelluksessa on alustavasti neljä näkymää, joiden ulkoasu hakee vielä
+muotoaan.<br>
 ![image](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/kayttoliittymaluonnos.png)
 ## Sovelluksen toiminallisuus
 ### Kirjautuminen
