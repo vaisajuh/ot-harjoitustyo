@@ -5,7 +5,7 @@ Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella ki
 Kirjautumisen jälkeen sovellukseen aukeaa uusi näkymä, jossa on sovelluksen toiminnallisuus. Sovelluksessa on alustavasti neljä näkymää, joiden ulkoasu hakee vielä
 muotoaan.<br>
 ![image](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/kayttoliittymaluonnos.png)
-## Sovelluksen toiminallisuus
+## Sovelluksen toiminnallisuus
 ### Kirjautuminen
 - Ensimmäisen kirjautumisen yhteydessä käyttäjälle luodaan käyttäjätunnus ja salasana, jos sellaista ei ole ennestään
   - Käyttäjä valitsee itse nämä tiedot ja syöttää kenttiin
