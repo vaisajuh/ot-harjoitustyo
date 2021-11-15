@@ -14,7 +14,6 @@ Kirjautumisen jälkeen sovellukseen aukeaa uusi näkymä, jossa on sovelluksen t
 - Käyttäjä voi luoda uuden yhteystiedon
   - Tämä sisältää nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
 - Käyttäjä voi poistaa yhteystiedon
-- Käyttäjä voi muokata yhteystietoa
 - Käyttäjä voi halutessaan kirjautua ulos järjestelmästä
 ## Ideoita sovelluksen laajentamiseen jatkossa
 - Useampi käyttäjärooli
