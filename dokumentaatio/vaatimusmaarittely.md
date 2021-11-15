@@ -2,8 +2,8 @@
 ## Sovelluksen tarkoitus
 Sovelluksen tarkoitukena on tallentaa yhteystietoja tietokantaan. Jokaisella kirjautuneella käyttäjällä oma henkilökohtainen lista yhteystiedoista.
 ## Käyttöliittymäluonnos
-Kirjautumisen jälkeen sovellukseen aukeaa uusi näkymä, jossa on sovelluksen toiminnallisuus. Kukin näistä toiminallisuuksista avautuu omaan ikkunaansa. Tämä on vasta alustava suunnitelma ja voi vielä muuttua hieman<br>
-![image](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/luonnos.png)
+Kirjautumisen jälkeen sovellukseen aukeaa uusi näkymä, jossa on sovelluksen toiminnallisuus. Sovelluksessa on yhteensä neljä näkymää ja näistä kuva alempana <br>
+
 ## Sovelluksen toiminallisuus
 ### Kirjautuminen
 - Ensimmäisen kirjautumisen yhteydessä käyttäjälle luodaan käyttäjätunnus ja salasana, jos sellaista ei ole ennestään
