@@ -9,7 +9,7 @@ muotoaan.<br>
 ### Kirjautuminen
 - Ensimmäisen kirjautumisen yhteydessä käyttäjälle luodaan käyttäjätunnus ja salasana, jos sellaista ei ole ennestään
   - Käyttäjä valitsee itse nämä tiedot ja syöttää kenttiin
-  - Tunnuksen ja salasanan pituuden tulee olla viiden ja kahdenkymmenen kirjaimen väliltä
+  - Tunnuksen ja salasanan pituuden tulee olla viiden ja kahdenkymmenen merkin väliltä
 ### Toiminnallisuus sovelluksen sisällä
 - Käyttäjä voi tehdä hakuja tietokantaan hakeakseen yhteystietoja
 - Käyttäjä voi luoda uuden yhteystiedon
