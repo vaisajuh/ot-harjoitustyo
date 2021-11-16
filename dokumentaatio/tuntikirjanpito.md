@@ -11,9 +11,9 @@
     <td>Suunnittelua</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>16.11</td>
+    <td>3</td>
+    <td>Tkinterin testaamista ja pientä koodaamista</td>
   </tr>
   <tr>
     <td>-</td>
