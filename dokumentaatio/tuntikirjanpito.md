@@ -16,9 +16,9 @@
     <td>Tkinterin testaamista ja pientä koodaamista</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>17.11</td>
+    <td>3</td>
+    <td>Käyttöliittymän rakentelua</td>
   </tr>
   <tr>
     <td>-</td>
