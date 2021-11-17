@@ -1,5 +1,6 @@
 from ui.login import Login
 from ui.functionality import Functionality
+from ui.add_contact import AddContact
 
 class UI:
     def __init__(self, root):
@@ -20,5 +21,11 @@ class UI:
     
     def start_functionality(self):
         self.destroy_current_view()
-        self.current_view = Functionality(self.root, self.start_login)
+        self.current_view = Functionality(self.root, self.start_login, self.start_add_contact)
         self.current_view.start_functionality()
+    
+
+    def start_add_contact(self):
+        self.destroy_current_view()
+        self.current_view = AddContact(self.root, self.start_functionality)
+        self.current_view.start_add_contact()

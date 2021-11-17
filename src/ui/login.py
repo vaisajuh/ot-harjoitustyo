@@ -14,11 +14,9 @@ class Login:
 
 
     def start_login(self):
-        self.root.geometry('300x200')
 
         self.login = ttk.Frame(master=self.root)
         self.login.pack(padx=10, pady=10, fill='x', expand=True)
-
 
         self.username_label = ttk.Label(master=self.login, text="Käyttäjänimi")
         self.username_label.pack(fill='x', expand=True)
@@ -32,6 +30,6 @@ class Login:
         self.password_entry = ttk.Entry(master=self.login, show="*")
         self.password_entry.pack(fill='x', expand=True)
 
-        signin_button = ttk.Button(master=self.login, text="Kirjaudu", command=self.functionality)
-        signin_button.pack(fill='x', expand=True, pady=10)
+        login_button = ttk.Button(master=self.login, text="Kirjaudu", command=self.functionality)
+        login_button.pack(fill='x', expand=True, pady=10)
     

@@ -1,9 +1,10 @@
 from tkinter import ttk
 
 class Functionality:
-    def __init__(self, root, login):
+    def __init__(self, root, login, add_contact):
         self.root = root
         self.login = login
+        self.add_contact = add_contact
         self.functionality = None
 
     
@@ -19,7 +20,7 @@ class Functionality:
         get_button = ttk.Button(master=self.functionality, text="Hae yhteystiedot", command="")
         get_button.pack(fill='x', expand=True, pady=10)
 
-        add_button = ttk.Button(master=self.functionality, text="Lisää yhteystieto", command="")
+        add_button = ttk.Button(master=self.functionality, text="Lisää yhteystieto", command=self.add_contact)
         add_button.pack(fill='x', expand=True, pady=10)
 
         logout_button = ttk.Button(master=self.functionality, text="Kirjaudu ulos", command=self.login)
