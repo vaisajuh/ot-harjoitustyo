@@ -5,9 +5,8 @@ def main():
    root = Tk()
    root.title("Yhteystiedot")
    root.resizable(False, False)
-   root.geometry('300x150')
    ui = UI(root)
-   ui.start()
+   ui.start_login()
    root.mainloop()
 
 
