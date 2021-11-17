@@ -1,9 +1,9 @@
 from tkinter import ttk
 
 class Login:
-    def __init__(self, root, funtionality):
+    def __init__(self, root, functionality):
         self.root = root
-        self.functionality = funtionality
+        self.functionality = functionality
         self.login = None
         self.username_entry = None
         self.password_entry = None

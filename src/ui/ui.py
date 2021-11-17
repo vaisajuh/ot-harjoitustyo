@@ -19,7 +19,6 @@ class UI:
     
     
     def start_functionality(self):
-        print('a')
         self.destroy_current_view()
         self.current_view = Functionality(self.root, self.start_login)
         self.current_view.start_functionality()

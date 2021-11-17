@@ -8,8 +8,8 @@ class Functionality:
 
     
     def destroy(self):
-        self.login.destroy()
-        
+        self.functionality.destroy()
+
 
     def start_functionality(self):
 
