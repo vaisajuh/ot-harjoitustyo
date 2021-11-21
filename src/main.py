@@ -1,8 +1,9 @@
 from tkinter import Tk
 from ui.ui import UI
-import handle_database
+from handle_database import Handle_database
 
 def main():
+   db = Handle_database()
    root = Tk()
    root.title("Yhteystiedot")
    root.resizable(False, False)

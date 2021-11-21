@@ -1,9 +1,9 @@
 import csv
-from config import DATABASE_TABLES
+from config import DATABASE_TABLES_PATH
 
 database_file = []
 def init_file():
-    with open(DATABASE_TABLES) as tables:
+    with open(DATABASE_TABLES_PATH) as tables:
         for row in csv.reader(tables, delimiter=";"):
             database_file.append(row)
 

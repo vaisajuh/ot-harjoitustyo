@@ -1,12 +1,12 @@
 import sqlite3
-from config import CONTACTS_DATABASE
+from config import CONTACTS_DATABASE_PATH
 import csv_reader
 
 
 class Handle_database:
 
     def __init__(self):
-        self.database = sqlite3.connect(CONTACTS_DATABASE)
+        self.database = sqlite3.connect(CONTACTS_DATABASE_PATH)
         self.tables = csv_reader.get_database_tables()
         
 
