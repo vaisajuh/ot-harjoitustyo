@@ -5,7 +5,7 @@ from store.handle_contacts import HandleContacts
 from store.handle_users import HandleUsers
 
 
-class Handle_database:
+class HandleDatabase:
 
     def __init__(self):
         self.database = sqlite3.connect(CONTACTS_DATABASE_PATH)
@@ -30,7 +30,7 @@ class Handle_database:
     
 
 if __name__ == "__main__":
-    test = Handle_database()
+    test = HandleDatabase()
     test.users.insert_user("udsaadsser", "1234")
     test.contacts.insert_contact("namedsa", "street", "x@x.com", "0123456789")
     test.contacts.get_contacts()

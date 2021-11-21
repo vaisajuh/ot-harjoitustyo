@@ -1,4 +1,3 @@
-
 class HandleContacts:
 
     def __init__(self, db):
