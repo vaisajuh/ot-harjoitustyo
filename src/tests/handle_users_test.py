@@ -4,7 +4,7 @@ from handle_database import HandleDatabase
 class TestHandleUsers(unittest.TestCase):
     def setUp(self):
         self.test = HandleDatabase()
-
+        self.test.clear_database()
     
     def test_empty_table(self):
         users = self.test.users.get_users()
