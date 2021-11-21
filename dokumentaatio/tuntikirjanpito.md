@@ -21,6 +21,11 @@
     <td>Käyttöliittymän rakentelua</td>
   </tr>
   <tr>
+    <td>21.11</td>
+    <td>4</td>
+    <td>Enimmäkseen tietokannan kanssa säätämistä</td>
+  </tr>
+    <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
