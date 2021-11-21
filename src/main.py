@@ -1,5 +1,6 @@
 from tkinter import Tk
 from ui.ui import UI
+import handle_database
 
 def main():
    root = Tk()

@@ -25,7 +25,7 @@ class Handle_database:
     
 
     def get_users(self):
-        get_users = self.database.execute('SELECT name FROM Users').fetchall()
+        get_users = self.database.execute('SELECT name, password FROM Users').fetchall()
         for i in get_users:
             print(', '.join(i))
     
@@ -36,8 +36,8 @@ class Handle_database:
             print(', '.join(i))
     
 
-    def insert_user(self, name: str):
-        self.database.execute('INSERT INTO Users (name) VALUES (?)', [name])
+    def insert_user(self, name: str, password: str):
+        self.database.execute('INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
 
 
     def insert_contact(self, name: str, address: str, email: str, phonenumber: str):
@@ -47,12 +47,12 @@ class Handle_database:
 if __name__ == "__main__":
     test = Handle_database()
     test.initialize_database()
-    test.insert_user("user")
+    test.insert_user("user", "1234")
     test.insert_contact("name", "street", "x@x.com", "0123456789")
     test.get_contacts()
     test.get_users()
     test.clear_database()
-    test.insert_user("user")
+    test.insert_user("user", "1234")
     test.insert_contact("name", "street", "x@x.com", "0123456789")
     test.get_contacts()
     test.get_users()

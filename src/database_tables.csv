@@ -1,2 +1,2 @@
-CREATE TABLE Users (id INTEGER PRIMARY KEY, name TEXT)
+CREATE TABLE Users (id INTEGER PRIMARY KEY, name TEXT, password TEXT)
 CREATE TABLE Contacts (id INTEGER PRIMARY KEY, name TEXT, address TEXT, email TEXT, phonenumber TEXT)
