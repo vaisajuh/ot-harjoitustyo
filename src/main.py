@@ -8,7 +8,7 @@ def main():
    root.title("Yhteystiedot")
    root.resizable(False, False)
    root.geometry('300x300')
-   ui = UI(root)
+   ui = UI(root, db)
    ui.start_login()
    root.mainloop()
 

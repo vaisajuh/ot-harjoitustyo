@@ -1,9 +1,10 @@
 from tkinter import ttk
 
 class Login:
-    def __init__(self, root, functionality):
+    def __init__(self, root, functionality, db):
         self.root = root
         self.functionality = functionality
+        self.db = db
         self.login = None
         self.username_entry = None
         self.password_entry = None
@@ -12,7 +13,13 @@ class Login:
     def destroy(self):
         self.login.destroy()
 
+    
+    def validate_login(self):
 
+        self.db.users.insert_user(self.username_entry.get(), self.password_entry.get())
+        self.db.users.get_users()
+        self.functionality()
+    
     def start_login(self):
 
         self.login = ttk.Frame(master=self.root)
@@ -30,6 +37,6 @@ class Login:
         self.password_entry = ttk.Entry(master=self.login, show="*")
         self.password_entry.pack(fill='x', expand=True)
 
-        login_button = ttk.Button(master=self.login, text="Kirjaudu", command=self.functionality)
+        login_button = ttk.Button(master=self.login, text="Kirjaudu", command=self.validate_login)
         login_button.pack(fill='x', expand=True, pady=10)
     
