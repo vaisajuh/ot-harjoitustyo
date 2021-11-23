@@ -16,14 +16,14 @@ class Login:
 
     
     def validate_login(self):
-        if len(self.username_entry.get()) >= 5 and len(self.username_entry.get()) <= 20 and \
-            len(self.password_entry.get()) >= 5 and len(self.password_entry.get()) <= 20:
+        if len(self.username_entry.get()) >= 4 and len(self.username_entry.get()) <= 20 and \
+            len(self.password_entry.get()) >= 4 and len(self.password_entry.get()) <= 20:
                 self.db.users.insert_user(self.username_entry.get(), self.password_entry.get())
                 self.functionality()
             
         else: showwarning(
                 title="Tiedoksi",
-                message="Käyttäjänimen ja salasanan tulee olla viiden ja " \
+                message="Käyttäjänimen ja salasanan tulee olla neljän ja " \
                     "kahdenkymmenen merkin väliltä"
             )
     
