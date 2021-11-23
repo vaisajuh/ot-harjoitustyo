@@ -13,8 +13,10 @@ class HandleUsers:
         return list
 
     def insert_user(self, name: str, password: str):
-        self.database.execute('INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
-        self.database.commit()
-    
+        try:
+            self.database.execute('INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
+            self.database.commit()
+        except:
+            ""
 
   
