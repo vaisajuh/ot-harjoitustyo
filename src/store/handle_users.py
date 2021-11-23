@@ -6,9 +6,11 @@ class HandleUsers:
     
 
     def get_users(self):
+        list = []
         get_users = self.database.execute('SELECT name, password FROM Users').fetchall()
-
-        return get_users
+        for i in get_users:
+            list.append(i[0] + ", " + i[1])
+        return list
 
     def insert_user(self, name: str, password: str):
         self.database.execute('INSERT INTO Users (name, password) VALUES (?,?)', [name, password])

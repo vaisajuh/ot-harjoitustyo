@@ -26,6 +26,7 @@ class HandleDatabase:
     def clear_database(self):
         self.database.execute('DELETE FROM Users')
         self.database.execute('DELETE FROM Contacts')
+        self.database.commit()
         print('-------')
     
 
