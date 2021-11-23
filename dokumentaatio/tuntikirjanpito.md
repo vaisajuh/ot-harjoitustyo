@@ -26,6 +26,18 @@
     <td>Enimmäkseen tietokannan kanssa säätämistä</td>
   </tr>
     <tr>
+    <td>23.11</td>
+    <td>2</td>
+    <td>Testien rakentelua</td>
+  </tr>
+    </tr>
+    <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+    </tr>
+    <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
