@@ -1,9 +1,10 @@
 from tkinter import ttk
 
 class AddContact:
-    def __init__(self, root, functionality):
+    def __init__(self, root, functionality, session):
         self.root = root
         self.functionality = functionality
+        self.session = session
         self.add_contact = None
         self.name_entry = None
         self.address_entry = None
@@ -13,6 +14,10 @@ class AddContact:
     
     def destroy(self):
         self.add_contact.destroy()
+    
+
+    def validate_add_contact(self):
+        ""
     
 
     def start_add_contact(self):

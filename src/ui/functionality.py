@@ -10,7 +10,7 @@ class Functionality:
     
     def destroy(self):
         self.functionality.destroy()
-
+    
 
     def start_functionality(self):
 

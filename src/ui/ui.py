@@ -3,9 +3,10 @@ from ui.functionality import Functionality
 from ui.add_contact import AddContact
 
 class UI:
-    def __init__(self, root, db):
+    def __init__(self, root, db, session):
         self.root = root
         self.db = db
+        self.session = session
         self.current_view = None
 
     def destroy_current_view(self):
@@ -16,7 +17,7 @@ class UI:
 
     def start_login(self):
         self.destroy_current_view()
-        self.current_view = Login(self.root, self.start_functionality, self.db)
+        self.current_view = Login(self.root, self.start_functionality, self.db, self.session)
         self.current_view.start_login()
     
     
@@ -28,5 +29,5 @@ class UI:
 
     def start_add_contact(self):
         self.destroy_current_view()
-        self.current_view = AddContact(self.root, self.start_functionality)
+        self.current_view = AddContact(self.root, self.start_functionality, self.session)
         self.current_view.start_add_contact()

@@ -2,10 +2,11 @@ from tkinter import ttk
 from tkinter.messagebox import showwarning
 
 class Login:
-    def __init__(self, root, functionality, db):
+    def __init__(self, root, functionality, db, session):
         self.root = root
         self.functionality = functionality
         self.db = db
+        self.session = session
         self.login = None
         self.username_entry = None
         self.password_entry = None
@@ -18,14 +19,26 @@ class Login:
     def validate_login(self):
         if len(self.username_entry.get()) >= 4 and len(self.username_entry.get()) <= 20 and \
             len(self.password_entry.get()) >= 4 and len(self.password_entry.get()) <= 20:
-                self.db.users.insert_user(self.username_entry.get(), self.password_entry.get())
-                self.functionality()
+            self.validate_password()
             
         else: showwarning(
                 title="Tiedoksi",
                 message="Käyttäjänimen ja salasanan tulee olla neljän ja " \
                     "kahdenkymmenen merkin väliltä"
             )
+        
+    
+    def validate_password(self):
+        validate = self.db.users.validate_password(self.username_entry.get(), self.password_entry.get())
+        if validate == False:
+            showwarning(
+                title="Tiedoksi",
+                message="Väärä salasana!"
+            )
+        else:
+            self.session.add_session(validate)
+            self.functionality()
+
     
 
     

@@ -10,7 +10,7 @@ class HandleContacts:
             print(', '.join(i))
     
 
-    def insert_contact(self, name: str, address: str, email: str, phonenumber: str):
-        self.database.execute('INSERT INTO Contacts (name, address, email, phonenumber)'\
-            'VALUES (?,?,?,?)', [name, address, email, phonenumber])
+    def insert_contact(self,  user_id: int, name: str, address: str, email: str, phonenumber: str):
+        self.database.execute('INSERT INTO Contacts (user_id, name, address, email, phonenumber)'\
+            'VALUES (?,?,?,?)', [user_id, name, address, email, phonenumber])
         self.database.commit()
