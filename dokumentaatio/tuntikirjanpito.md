@@ -25,21 +25,29 @@
     <td>4</td>
     <td>Enimmäkseen tietokannan kanssa säätämistä</td>
   </tr>
-    <tr>
+  <tr>
     <td>23.11</td>
     <td>2</td>
     <td>Testien rakentelua</td>
   </tr>
-    </tr>
+  <tr>
+    <td>29.11</td>
+    <td>4</td>
+    <td>Toiminallisuus käyttäjien ja tietojen lisäämiseen tietokantaan</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
     <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
-    </tr>
     <tr>
-    <td>-</td>
-    <td>-</td>
+    <td>yht</td>
+    <td>18</td>
     <td>-</td>
   </tr>
 </table>
