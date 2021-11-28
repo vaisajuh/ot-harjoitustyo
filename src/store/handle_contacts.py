@@ -4,13 +4,21 @@ class HandleContacts:
         self.database = db
     
 
-    def get_contacts(self):
-        get_contacts = self.database.execute('SELECT name, address, email, phonenumber FROM Contacts').fetchall()
-        for i in get_contacts:
-            print(', '.join(i))
+    def get_contacts(self, user_id):
+        get_contacts = self.database.execute('SELECT c.name, c.address, c.email, c.phonenumber FROM Users u'\
+            ' JOIN Contacts c on u.id = c.user_id WHERE u.id = ?', [user_id]).fetchall()
+        return get_contacts
     
 
     def insert_contact(self,  user_id: int, name: str, address: str, email: str, phonenumber: str):
-        self.database.execute('INSERT INTO Contacts (user_id, name, address, email, phonenumber)'\
-            'VALUES (?,?,?,?)', [user_id, name, address, email, phonenumber])
-        self.database.commit()
+        name = name.lower()
+        address = address.lower()
+        email = email.lower()
+        try:
+            self.database.execute('INSERT INTO Contacts (user_id, name, address, email, phonenumber)'\
+            ' VALUES (?,?,?,?,?)', [user_id, name, address, email, phonenumber])
+            self.database.commit()
+        except:
+            ""
+        joo = self.get_contacts(3)
+        print(joo)

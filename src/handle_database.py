@@ -28,13 +28,5 @@ class HandleDatabase:
         self.database.execute('DELETE FROM Contacts')
         self.database.commit()
         print('-------')
-    
 
-if __name__ == "__main__":
-    test = HandleDatabase()
-    test.users.insert_user("udsaadsser", "1234")
-    test.contacts.insert_contact("namedsa", "street", "x@x.com", "0123456789")
-    test.contacts.get_contacts()
-    test.users.get_users()
-    test.clear_database()
 

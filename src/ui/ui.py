@@ -29,5 +29,5 @@ class UI:
 
     def start_add_contact(self):
         self.destroy_current_view()
-        self.current_view = AddContact(self.root, self.start_functionality, self.session)
+        self.current_view = AddContact(self.root, self.start_functionality, self.db, self.session)
         self.current_view.start_add_contact()

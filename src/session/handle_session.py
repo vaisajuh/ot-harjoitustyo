@@ -4,10 +4,10 @@ class HandleSession:
         self.session = []
     
 
-    def add_session(self, username):
-        self.session.append(username)
+    def add_session(self, user_id):
+        self.session.append(user_id)
     
 
     def get_session(self):
-        id = len(self.session) - 1
+        id = self.session[-1]
         return id

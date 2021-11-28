@@ -1,9 +1,11 @@
+from logging import addLevelName
 from tkinter import ttk
 
 class AddContact:
-    def __init__(self, root, functionality, session):
+    def __init__(self, root, functionality, db,  session):
         self.root = root
         self.functionality = functionality
+        self.db = db
         self.session = session
         self.add_contact = None
         self.name_entry = None
@@ -16,8 +18,9 @@ class AddContact:
         self.add_contact.destroy()
     
 
-    def validate_add_contact(self):
-        ""
+    def validate_insert_contact(self):
+        current_session = self.session.get_session()
+        self.db.contacts.insert_contact(current_session, self.name_entry.get(), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
     
 
     def start_add_contact(self):
@@ -48,7 +51,7 @@ class AddContact:
         self.phone_number_entry = ttk.Entry(master=self.add_contact)
         self.phone_number_entry.pack(fill='x', expand=True)
 
-        add_button = ttk.Button(master=self.add_contact, text="Lisää", command="")
+        add_button = ttk.Button(master=self.add_contact, text="Lisää", command=self.validate_insert_contact)
         add_button.pack(fill='x', expand=True, pady=10)
 
         reverse_button = ttk.Button(master=self.add_contact, text="Palaa edelliseen näkymään", command=self.functionality)
