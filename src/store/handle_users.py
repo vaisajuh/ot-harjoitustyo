@@ -13,13 +13,11 @@ class HandleUsers:
         return list
 
     def insert_user(self, name: str, password: str):
-        try:
-            name = name.lower()
-            password = password.lower()
-            self.database.execute('INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
-            self.database.commit()
-        except:
-            ""
+        name = name.lower()
+        password = password.lower()
+        self.database.execute('INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
+        self.database.commit()
+
     
     def validate_password(self, name: str, password: str):
         count = self.database.execute('SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
