@@ -20,5 +20,3 @@ class HandleContacts:
             self.database.commit()
         except:
             ""
-        joo = self.get_contacts(3)
-        print(joo)

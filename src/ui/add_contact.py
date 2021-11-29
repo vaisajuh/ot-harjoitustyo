@@ -1,4 +1,4 @@
-from logging import addLevelName
+from tkinter.messagebox import showinfo
 from tkinter import ttk
 
 class AddContact:
@@ -21,6 +21,10 @@ class AddContact:
     def validate_insert_contact(self):
         current_session = self.session.get_session()
         self.db.contacts.insert_contact(current_session, self.name_entry.get(), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
+        showinfo(
+            title="Tiedoksi",
+            message="Yhteystieto lisätty tietokantaan"
+        )
     
 
     def start_add_contact(self):
@@ -56,8 +60,3 @@ class AddContact:
 
         reverse_button = ttk.Button(master=self.add_contact, text="Palaa edelliseen näkymään", command=self.functionality)
         reverse_button.pack(fill='x', expand=True, pady=10)
-        
-
-
-
-
