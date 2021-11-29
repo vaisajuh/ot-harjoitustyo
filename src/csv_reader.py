@@ -2,6 +2,8 @@ import csv
 from config import DATABASE_TABLES_PATH
 
 database_file = []
+
+
 def init_file():
     with open(DATABASE_TABLES_PATH) as tables:
         for row in csv.reader(tables, delimiter=";"):
