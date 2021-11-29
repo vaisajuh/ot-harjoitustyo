@@ -16,7 +16,7 @@ class TestHandleUsers(unittest.TestCase):
         self.test.users.insert_user("Michelin", "1234")
         get = self.test.users.get_users()
         value = get[0]
-        self.assertEqual(value, "Michelin, 1234")
+        self.assertEqual(value, "michelin, 1234")
 
  
  
