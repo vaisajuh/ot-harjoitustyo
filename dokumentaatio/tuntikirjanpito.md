@@ -31,14 +31,14 @@
     <td>Testien rakentelua</td>
   </tr>
   <tr>
-    <td>29.11</td>
+    <td>28.11</td>
     <td>4</td>
     <td>Toiminallisuus käyttäjien ja tietojen lisäämiseen tietokantaan</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>29.11</td>
+    <td>2</td>
+    <td>Toiminallisuus yhteystietojen näyttämiseen</td>
   </tr>
     <tr>
     <td>-</td>
@@ -47,7 +47,7 @@
   </tr>
     <tr>
     <td>yht</td>
-    <td>18</td>
+    <td>20</td>
     <td>-</td>
   </tr>
 </table>
