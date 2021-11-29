@@ -16,3 +16,4 @@ src/contacts_database.db
 htmlcov
 .coverage
 src/.coveragerc.save
+src/.coverage
