@@ -47,6 +47,11 @@
   </tr>
   <tr>
    <tr>
+    <td>30.11</td>
+    <td>2</td>
+    <td>Koodin siistimistä pylintin avulla</td>
+  </tr>
+  <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -57,7 +62,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>23</td>
+    <td>25</td>
     <td>-</td>
   </tr>
 </table>
