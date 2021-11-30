@@ -7,5 +7,5 @@ class HandleSession:
         self.session.append(user_id)
 
     def get_session(self):
-        id = self.session[-1]
-        return id
+        user_id = self.session[-1]
+        return user_id

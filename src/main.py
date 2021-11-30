@@ -5,14 +5,14 @@ from session.handle_session import HandleSession
 
 
 def main():
-    db = HandleDatabase()
+    database = HandleDatabase()
     session = HandleSession()
     root = Tk()
     root.title("Yhteystiedot")
     root.resizable(False, False)
     root.geometry('300x300')
-    ui = UI(root, db, session)
-    ui.start_login()
+    user_interface = UI(root, database, session)
+    user_interface.start_login()
     root.mainloop()
 
 

@@ -1,16 +1,16 @@
 
 class HandleUsers:
 
-    def __init__(self, db):
-        self.database = db
+    def __init__(self, database):
+        self.database = database
 
     def get_users(self):
-        list = []
+        get_users = []
         get_users = self.database.execute(
             'SELECT name, password FROM Users').fetchall()
         for i in get_users:
             list.append(i[0] + ", " + i[1])
-        return list
+        return get_users
 
     def insert_user(self, name: str, password: str):
         name = name.lower()
@@ -30,10 +30,8 @@ class HandleUsers:
                 'SELECT password FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
             if str(get_pass) == password:
                 return int(get_id)
-            else:
-                return False
-        else:
-            self.insert_user(name, password)
-            get_id = self.database.execute(
-                'SELECT Users.id FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
-            return int(get_id)
+            return False
+        self.insert_user(name, password)
+        get_id = self.database.execute(
+            'SELECT Users.id FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
+        return int(get_id)

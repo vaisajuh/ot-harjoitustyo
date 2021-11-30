@@ -12,18 +12,15 @@ class HandleDatabase:
         self.tables = csv_reader.get_database_tables()
         self.users = HandleUsers(self.database)
         self.contacts = HandleContacts(self.database)
-
         self.initialize_database()
 
+
     def initialize_database(self):
-        try:
-            for i in self.tables:
-                self.database.execute(''.join(i))
-        except:
-            ""
+        for i in self.tables:
+            self.database.execute(''.join(i))
+
 
     def clear_database(self):
         self.database.execute('DELETE FROM Users')
         self.database.execute('DELETE FROM Contacts')
         self.database.commit()
-        print('-------')
