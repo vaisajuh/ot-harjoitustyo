@@ -7,11 +7,13 @@ class TestHandleUsers(unittest.TestCase):
         self.test = HandleDatabase()
         self.test.clear_database()
 
+
     def test_insert_user(self):
         self.test.users.insert_user("Michelin", "1234")
         get = self.test.users.get_users()
         value = get[0]
         self.assertEqual(value, "michelin, 1234")
+
 
     def test_validate_password(self):
         user_creation = self.test.users.validate_password("Michelin", "1234")
