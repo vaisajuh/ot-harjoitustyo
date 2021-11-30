@@ -5,12 +5,13 @@ class HandleUsers:
         self.database = database
 
     def get_users(self):
-        get_users = []
+        users = []
         get_users = self.database.execute(
             'SELECT name, password FROM Users').fetchall()
         for i in get_users:
-            list.append(i[0] + ", " + i[1])
-        return get_users
+            users.append(i[0] + ", " + i[1])
+        return users
+
 
     def insert_user(self, name: str, password: str):
         name = name.lower()
@@ -18,6 +19,7 @@ class HandleUsers:
         self.database.execute(
             'INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
         self.database.commit()
+
 
     def validate_password(self, name: str, password: str):
         count = self.database.execute(
