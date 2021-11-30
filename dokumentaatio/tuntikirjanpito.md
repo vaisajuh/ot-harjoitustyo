@@ -40,14 +40,24 @@
     <td>2</td>
     <td>Toiminallisuus yhteystietojen näyttämiseen</td>
   </tr>
-    <tr>
+  <tr>
+    <td>-</td>
+    <td>2</td>
+    <td>Testikattavuuden laajentaminen</td>
+  </tr>
+  <tr>
+   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
-    <tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
     <td>yht</td>
-    <td>20</td>
+    <td>23</td>
     <td>-</td>
   </tr>
 </table>
