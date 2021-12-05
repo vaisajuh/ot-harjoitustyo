@@ -17,7 +17,7 @@ muotoaan.<br>
   - [x] Käyttäjä voi tässä yhteydessä poistaa yhteystiedon
 - Käyttäjä voi luoda uuden yhteystiedon
   - [x] Tämä sisältää nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
-  - [ ] Käyttäjän syötteen tarkastaminen
+  - [x] Käyttäjän syötteen tarkastaminen
 - Kirjautuminen ulos
   - [x] Käyttäjän kirjautuminen ulos sovelluksesta vie takaisin aloitusnäkymään 
 ## Ideoita sovelluksen laajentamiseen jatkossa
