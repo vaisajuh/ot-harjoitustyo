@@ -25,6 +25,8 @@ class AddContact:
             title="Tiedoksi",
             message="Yhteystieto lisätty tietokantaan"
         )
+        self.destroy()
+        self.start_add_contact()
 
     def start_add_contact(self):
         self.add_contact = ttk.Frame(master=self.root)

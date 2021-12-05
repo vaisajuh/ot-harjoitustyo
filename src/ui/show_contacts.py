@@ -50,10 +50,10 @@ class ShowContacts:
         self.tree.column("# 4", anchor=CENTER)
         self.tree.heading("# 4", text="Puhelinnumero")
         self.insert_contacts()
-        self.tree.grid(row=0)
+        self.tree.grid()
         remove_button = ttk.Button(
             master=self.show_contacts, text="Poista", command=self.remove_button)
-        remove_button.grid()
+        remove_button.grid(column=1)
         reverse_button = ttk.Button(
             master=self.show_contacts, text="Palaa edelliseen näkymään", command=self.functionality)
         reverse_button.grid()
