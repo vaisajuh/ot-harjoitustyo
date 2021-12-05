@@ -14,7 +14,7 @@ muotoaan.<br>
 - Käyttäjä voi tehdä hakuja tietokantaan hakeakseen yhteystietoja
   - [x] Kaikki yhteystiedot kerralla
   - [ ] Käyttäjän määrittelemät hakusanat
-  - [ ] Käyttäjä voi tässä yhteydessä poistaa yhteystiedon
+  - [x] Käyttäjä voi tässä yhteydessä poistaa yhteystiedon
 - Käyttäjä voi luoda uuden yhteystiedon
   - [x] Tämä sisältää nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
   - [ ] Käyttäjän syötteen tarkastaminen
