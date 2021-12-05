@@ -18,28 +18,41 @@ class AddContact:
         self.add_contact.destroy()
 
     def validate_insert_contact(self):
-        validate = self.validate_length()
-        if validate == True:
-            current_session = self.session.get_session()
-            self.db.contacts.insert_contact(current_session, self.name_entry.get(
-            ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
-            showinfo(
-                title="Tiedoksi",
-                message="Yhteystieto lisätty tietokantaan"
-            )
-        print("1")
+        validate_length = self.validate_length()
+        if validate_length == True:
+            validate_email = self.validate_email()
+            if validate_email == True:
+                current_session = self.session.get_session()
+                self.db.contacts.insert_contact(current_session, self.name_entry.get(
+                ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
+                showinfo(
+                    title="Tiedoksi",
+                    message="Yhteystieto lisätty tietokantaan"
+                )
         self.destroy()
         self.start_add_contact()
     
     def validate_length(self):
         if len(self.name_entry.get()) not in range(4, 40) or\
             len(self.address_entry.get()) not in range(4,40) or\
-                len(self.phone_number_entry.get()) not in range(4,40):
-                showinfo(
-            title="Tiedoksi",
-            message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
+                len(self.phone_number_entry.get()) not in range(4,40) or\
+                    len(self.email_entry.get()) not in range(4,40):
+                    showinfo(
+                        title="Tiedoksi",
+                        message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
+                        )
+                    return False
+        return True
+    
+    def validate_email(self):
+        first_letter = self.email_entry.get()[0]
+        if '@' and "." not in self.email_entry.get()\
+            or first_letter == "@":
+            showinfo(
+                title="Tiedoksi",
+                message="Sähköpostin tulee muodossa x@x.x"
             )
-                return False
+            return False
         return True
 
     def start_add_contact(self):
