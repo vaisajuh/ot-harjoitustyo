@@ -52,6 +52,11 @@
     <td>Koodin siistimistä pylintin avulla</td>
   </tr>
   <tr>
+    <td>5.12</td>
+    <td>4</td>
+    <td>Lisätty mahdollisuus yhteystietojen poistamiseen ja tälle poistolle oma testinsä. Lisätty myös tarkastus käyttäjien antamille syötteille yhteystietojen lisäyksen yhteydessä </td>
+  </tr>
+  <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -61,8 +66,13 @@
     <td>-</td>
     <td>-</td>
   </tr>
+   <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
     <td>yht</td>
-    <td>25</td>
+    <td>29</td>
     <td>-</td>
   </tr>
 </table>
