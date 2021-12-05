@@ -9,7 +9,6 @@ class HandleContacts:
         [user_id]).fetchall()
         return get_contacts
 
-
     def insert_contact(self,  user_id: int, name: str, address: str, email: str, phonenumber: str):
         name = name.lower()
         address = address.lower()
@@ -17,7 +16,6 @@ class HandleContacts:
         self.database.execute('INSERT INTO Contacts (user_id, name, address, email, phonenumber)'
         ' VALUES (?,?,?,?,?)', [user_id, name, address, email, phonenumber])
         self.database.commit()
-
 
     def delete_contact(self, row_id: int):
         self.database.execute('DELETE FROM Contacts WHERE id = ?', [row_id])

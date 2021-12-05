@@ -12,14 +12,12 @@ class HandleUsers:
             users.append(i[0] + ", " + i[1])
         return users
 
-
     def insert_user(self, name: str, password: str):
         name = name.lower()
         password = password.lower()
         self.database.execute(
             'INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
         self.database.commit()
-
 
     def validate_password(self, name: str, password: str):
         count = self.database.execute(

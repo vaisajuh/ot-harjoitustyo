@@ -11,10 +11,8 @@ class ShowContacts:
         self.show_contacts = None
         self.tree = None
 
-
     def destroy(self):
         self.show_contacts.destroy()
-
 
     def insert_contacts(self):
         get_contacts = self.db.contacts.get_contacts(
@@ -23,8 +21,7 @@ class ShowContacts:
             ind = i[4]
             self.tree.insert('', 'end', text=ind,
                              values=(i[0], i[1], i[2], i[3]))
-            
-            
+
     def remove_button(self):
         try:
             row_value = self.tree.focus()

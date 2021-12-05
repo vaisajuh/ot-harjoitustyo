@@ -14,11 +14,9 @@ class HandleDatabase:
         self.contacts = HandleContacts(self.database)
         self.initialize_database()
 
-
     def initialize_database(self):
         for i in self.tables:
             self.database.execute(''.join(i))
-
 
     def clear_database(self):
         self.database.execute('DELETE FROM Users')
