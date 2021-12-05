@@ -18,15 +18,29 @@ class AddContact:
         self.add_contact.destroy()
 
     def validate_insert_contact(self):
-        current_session = self.session.get_session()
-        self.db.contacts.insert_contact(current_session, self.name_entry.get(
-        ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
-        showinfo(
-            title="Tiedoksi",
-            message="Yhteystieto lisätty tietokantaan"
-        )
+        validate = self.validate_length()
+        if validate == True:
+            current_session = self.session.get_session()
+            self.db.contacts.insert_contact(current_session, self.name_entry.get(
+            ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
+            showinfo(
+                title="Tiedoksi",
+                message="Yhteystieto lisätty tietokantaan"
+            )
+        print("1")
         self.destroy()
         self.start_add_contact()
+    
+    def validate_length(self):
+        if len(self.name_entry.get()) not in range(4, 40) or\
+            len(self.address_entry.get()) not in range(4,40) or\
+                len(self.phone_number_entry.get()) not in range(4,40):
+                showinfo(
+            title="Tiedoksi",
+            message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
+            )
+                return False
+        return True
 
     def start_add_contact(self):
         self.add_contact = ttk.Frame(master=self.root)
