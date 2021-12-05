@@ -19,16 +19,16 @@ class AddContact:
 
     def validate_insert_contact(self):
         validate_length = self.validate_length()
-        if validate_length == True:
-            validate_email = self.validate_email()
-            if validate_email == True:
-                current_session = self.session.get_session()
-                self.db.contacts.insert_contact(current_session, self.name_entry.get(
-                ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
-                showinfo(
-                    title="Tiedoksi",
-                    message="Yhteystieto lisätty tietokantaan"
-                )
+        validate_email = self.validate_email()
+        validate_number = self.validate_number()
+        if validate_length and validate_email and validate_number == True:
+            current_session = self.session.get_session()
+            self.db.contacts.insert_contact(current_session, self.name_entry.get(
+            ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
+            showinfo(
+                title="Tiedoksi",
+                message="Yhteystieto lisätty tietokantaan"
+            )
         self.destroy()
         self.start_add_contact()
     
@@ -45,15 +45,28 @@ class AddContact:
         return True
     
     def validate_email(self):
-        first_letter = self.email_entry.get()[0]
-        if '@' and "." not in self.email_entry.get()\
-            or first_letter == "@":
-            showinfo(
-                title="Tiedoksi",
-                message="Sähköpostin tulee muodossa x@x.x"
-            )
-            return False
+        try:
+            first_letter = self.email_entry.get()[0]
+            if '@' and "." not in self.email_entry.get()\
+                or first_letter == "@":
+                showinfo(
+                    title="Tiedoksi",
+                    message="Sähköpostin tulee muodossa x@x.x"
+                )
+                return False
+        except:
+            pass
         return True
+    
+    def validate_number(self):
+        for character in self.phone_number_entry.get():
+            if character.isdigit():
+                return True
+        showinfo(
+            title="Tiedoksi",
+            message="Puhelinnumerossa tulee olla vain numeroita"
+        )
+        return False
 
     def start_add_contact(self):
         self.add_contact = ttk.Frame(master=self.root)
