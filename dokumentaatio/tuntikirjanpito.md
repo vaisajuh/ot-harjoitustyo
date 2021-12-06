@@ -57,9 +57,9 @@
     <td>Lisätty mahdollisuus yhteystietojen poistamiseen ja tälle poistolle oma testinsä. Lisätty myös tarkastus käyttäjien antamille syötteille yhteystietojen lisäyksen yhteydessä </td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>7.12</td>
+    <td>1</td>
+    <td>Kansiorakenteen uudelleen muotoilu</td>
   </tr>
   <tr>
     <td>-</td>
@@ -72,7 +72,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>29</td>
+    <td>30</td>
     <td>-</td>
   </tr>
 </table>
