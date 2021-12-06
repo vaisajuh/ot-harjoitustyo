@@ -9,7 +9,7 @@ except FileNotFoundError:
     pass
 
 CONTACTS_DATABASE = os.getenv("CONTACTS_DATABASE") or 'contacts_database.db'
-CONTACTS_DATABASE_PATH = os.path.join(dirname, CONTACTS_DATABASE)
+CONTACTS_DATABASE_PATH = os.path.join(dirname, 'data', CONTACTS_DATABASE)
 
 DATABASE_TABLES = os.getenv('DATABASE_TABLES') or 'database_tables.csv'
-DATABASE_TABLES_PATH = os.path.join(dirname, DATABASE_TABLES)
+DATABASE_TABLES_PATH = os.path.join(dirname, 'data', DATABASE_TABLES)

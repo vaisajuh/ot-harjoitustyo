@@ -12,8 +12,8 @@ src/store/__pycache__/
 src/tests/__pycache__/
 src/session/__pycache__/__init__.cpython-38.pyc
 src/session/__pycache__/handle_session.cpython-38.pyc
-src/contacts_database.db
 htmlcov
 .coverage
 src/.coveragerc.save
 src/.coverage
+src/data/contacts_database.db
