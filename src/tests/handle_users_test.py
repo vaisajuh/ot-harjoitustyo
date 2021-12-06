@@ -1,5 +1,5 @@
 import unittest
-from handle_database import HandleDatabase
+from database.handle_database import HandleDatabase
 
 
 class TestHandleUsers(unittest.TestCase):
