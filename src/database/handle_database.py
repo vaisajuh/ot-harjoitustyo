@@ -1,6 +1,6 @@
 import sqlite3
 from config import CONTACTS_DATABASE_PATH
-import csv_reader
+from reader import csv_reader
 from storage.handle_contacts import HandleContacts
 from storage.handle_users import HandleUsers
 

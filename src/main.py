@@ -1,6 +1,6 @@
 from tkinter import Tk
 from ui.ui import UI
-from handle_database import HandleDatabase
+from database.handle_database import HandleDatabase
 from session.handle_session import HandleSession
 
 
