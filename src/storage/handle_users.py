@@ -6,7 +6,7 @@ class HandleUsers:
 
     def get_user(self, name:str):
         get_user = self.database.execute(
-            'SELECT name, password FROM Users WHERE name like ?', [name]).fetchall()
+            'SELECT id, name, password FROM Users WHERE name like ?', [name]).fetchall()
         return list(get_user[0])
 
     def insert_user(self, name: str, password: str):
@@ -21,14 +21,11 @@ class HandleUsers:
             'SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
         get_id = ""
         if int(count) == 1:
-            get_id = self.database.execute(
-                'SELECT Users.id FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
-            get_pass = self.database.execute(
-                'SELECT password FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
-            if str(get_pass) == password:
+            get_id = self.get_user(name)[0]
+            get_password = self.get_user(name)[2]
+            if str(get_password) == password:
                 return int(get_id)
             return False
         self.insert_user(name, password)
-        get_id = self.database.execute(
-            'SELECT Users.id FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
+        get_id = self.get_user(name)[0]
         return int(get_id)
