@@ -1,6 +1,7 @@
 # Arkkitehtuurikuvaus
 ## Sovelluslogiikka
 ### Luokkavaavio
+Kuva esittää sovelluksen käyttölogiikasta vastaavien luokkien suhdetta. <br>
 ![luokat](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/luokat1.png)
 ### Luokka- ja pakkauskaaviot
 Ensiksi pakkauksen <strong>store</strong> luokat injektoidaan luokkaan <strong>handledatabase,</strong> ja nämä injektoidaan luokkaan <strong>main.</strong> Luokkaan <strong>Main</strong> injektoidaan vielä pakkauksen <strong>session</strong> luokka <strong>handle_session,</strong>
