@@ -9,9 +9,12 @@ class TestHandleUsers(unittest.TestCase):
         self.user = self.test.users.insert_user("Michelin", "1234")
 
     def test_insert_user(self):
-        get = self.test.users.get_users()
-        value = get[0]
-        self.assertEqual(value, "michelin, 1234")
+        get_user = self.test.users.get_user("michelin")
+        name = get_user[0]
+        password = get_user[1]
+        self.assertEqual(name, "michelin")
+        self.assertEqual(password, "1234")
+
 
     def test_validate_password(self):
         invalid_pass = self.test.users.validate_password("Michelin", "1235")
