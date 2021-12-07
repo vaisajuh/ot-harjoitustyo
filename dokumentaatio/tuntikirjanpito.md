@@ -59,7 +59,7 @@
   <tr>
     <td>7.12</td>
     <td>2</td>
-    <td>Kansiorakenteen uudelleen muotoilua ja koodin refaktointia</td>
+    <td>Kansiorakenteen uudelleen muotoilua ja koodin refaktorointia</td>
   </tr>
   <tr>
     <td>-</td>
