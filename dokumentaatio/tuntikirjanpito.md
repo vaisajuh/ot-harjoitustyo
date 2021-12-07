@@ -58,21 +58,26 @@
   </tr>
   <tr>
     <td>7.12</td>
-    <td>1</td>
-    <td>Kansiorakenteen uudelleen muotoilu</td>
+    <td>2</td>
+    <td>Kansiorakenteen uudelleen muotoilua ja koodin refaktointia</td>
   </tr>
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
-   <tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>30</td>
+    <td>31</td>
     <td>-</td>
   </tr>
 </table>
