@@ -16,8 +16,8 @@ class Login:
         self.login.destroy()
 
     def validate_login(self):
-        if len(self.username_entry.get()) >= 4 and len(self.username_entry.get()) <= 20 and \
-                len(self.password_entry.get()) >= 4 and len(self.password_entry.get()) <= 20:
+        if len(self.username_entry.get()) in range(4, 20) and\
+             len(self.password_entry.get()) in range(4, 20):
             self.validate_password()
 
         else:
