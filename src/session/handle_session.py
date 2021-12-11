@@ -18,6 +18,6 @@ class HandleSession:
     def get_session(self):
         """Palauttaa viimeksi kirjautuneen käyttäjän id-numeron
         listasta"""
-        
+
         user_id = self.session[-1]
         return user_id
