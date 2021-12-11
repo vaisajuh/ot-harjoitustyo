@@ -1,5 +1,7 @@
 class HandleSession:
     """Luokka, joka vastaa kirjautuneista käyttäjistä
+    
+    Attributes:
     session: Kirjautuneet käyttäjät tallennetaan listaan
     """
 
