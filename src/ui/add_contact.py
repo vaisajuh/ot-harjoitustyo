@@ -31,24 +31,24 @@ class AddContact:
             )
         self.destroy()
         self.start_add_contact()
-    
+
     def validate_length(self):
         if len(self.name_entry.get()) not in range(4, 40) or\
-            len(self.address_entry.get()) not in range(4,40) or\
-                len(self.phone_number_entry.get()) not in range(4,40) or\
-                    len(self.email_entry.get()) not in range(4,40):
-                    showinfo(
-                        title="Tiedoksi",
-                        message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
-                        )
-                    return False
+                len(self.address_entry.get()) not in range(4, 40) or\
+            len(self.phone_number_entry.get()) not in range(4, 40) or\
+                len(self.email_entry.get()) not in range(4, 40):
+            showinfo(
+                title="Tiedoksi",
+                message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
+            )
+            return False
         return True
-    
+
     def validate_email(self):
         try:
             first_letter = self.email_entry.get()[0]
             if '@' and "." not in self.email_entry.get()\
-                or first_letter == "@":
+                    or first_letter == "@":
                 showinfo(
                     title="Tiedoksi",
                     message="Sähköpostin tulee muodossa x@x.x"
@@ -57,7 +57,7 @@ class AddContact:
         except:
             pass
         return True
-    
+
     def validate_number(self):
         for character in self.phone_number_entry.get():
             if character.isdigit():

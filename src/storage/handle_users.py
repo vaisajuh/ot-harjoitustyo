@@ -4,7 +4,7 @@ class HandleUsers:
     def __init__(self, database):
         self.database = database
 
-    def get_user(self, name:str):
+    def get_user(self, name: str):
         get_user = self.database.execute(
             'SELECT id, name, password FROM Users WHERE name like ?', [name]).fetchall()
         return list(get_user[0])

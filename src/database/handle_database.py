@@ -8,7 +8,7 @@ from storage.handle_users import HandleUsers
 class HandleDatabase:
     """Luokka, joka vastaa tietokantayhteydestä, sen alustamisesta ja
     tarvittaessa kaikkien tietojen poistamisesta
-    
+
     Attributes:
     database: Yhteys tietokantaan
     tables: Tietokantaan lisättävät taulut
@@ -27,13 +27,13 @@ class HandleDatabase:
     def initialize_database(self):
         """Lisää tietokantaan atribuutissa tablessa olevat
         tietokantataulut"""
-        
+
         for i in self.tables:
             self.database.execute(''.join(i))
 
     def clear_database(self):
         """Poistaa kaiken tiedon tietokannan tauluista"""
-        
+
         self.database.execute('DELETE FROM Users')
         self.database.execute('DELETE FROM Contacts')
         self.database.commit()

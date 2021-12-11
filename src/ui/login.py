@@ -17,7 +17,7 @@ class Login:
 
     def validate_login(self):
         if len(self.username_entry.get()) in range(4, 20) and\
-             len(self.password_entry.get()) in range(4, 20):
+                len(self.password_entry.get()) in range(4, 20):
             self.validate_password()
 
         else:
