@@ -77,7 +77,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>31</td>
+    <td>32</td>
     <td>-</td>
   </tr>
 </table>
