@@ -20,7 +20,7 @@ class HandleContacts:
 
     def insert_contact(self,  user_id: int, name: str, address: str, email: str, phonenumber: str):
         """Kirjautunut käyttäjä voi lisätä tällä yhteystietoja tietokantaan"""
-  
+
         name = name.lower()
         address = address.lower()
         email = email.lower()
