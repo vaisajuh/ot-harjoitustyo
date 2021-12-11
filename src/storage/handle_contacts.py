@@ -5,8 +5,8 @@ class HandleContacts:
 
     def get_contacts(self, user_id):
         get_contacts = self.database.execute('SELECT c.name, c.address, c.email, c.phonenumber,'
-                                             ' c.id FROM Users u JOIN Contacts c on u.id = c.user_id WHERE u.id = ?',
-                                             [user_id]).fetchall()
+        ' c.id FROM Users u JOIN Contacts c on u.id = c.user_id WHERE u.id = ?',
+        [user_id]).fetchall()
         return get_contacts
 
     def insert_contact(self,  user_id: int, name: str, address: str, email: str, phonenumber: str):
