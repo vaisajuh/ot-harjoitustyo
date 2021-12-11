@@ -62,9 +62,9 @@
     <td>Kansiorakenteen uudelleen muotoilua ja koodin refaktorointia</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>11.12</td>
+    <td>1</td>
+    <td>Koodin siistimistä ja dokumentointia</td>
   </tr>
   <tr>
     <td>-</td>
