@@ -67,17 +67,27 @@
     <td>Koodin siistimistä ja dokumentointia</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>12.12</td>
+    <td>1</td>
+    <td>Muuttujien ja metodien uudelleennimeämistä</td>
   </tr>
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
+   <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+   <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
     <td>yht</td>
-    <td>32</td>
+    <td>33</td>
     <td>-</td>
   </tr>
 </table>
