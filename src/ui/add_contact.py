@@ -8,23 +8,23 @@ class AddContact:
         self.functionality = functionality
         self.db = db
         self.session = session
-        self.add_contact = None
-        self.name_entry = None
-        self.address_entry = None
-        self.email_entry = None
-        self.phone_number_entry = None
+        self._add_contact = None
+        self._name_entry = None
+        self._address_entry = None
+        self._email_entry = None
+        self._phone_number_entry = None
 
     def destroy(self):
-        self.add_contact.destroy()
+        self._add_contact.destroy()
 
-    def validate_insert_contact(self):
-        validate_length = self.validate_length()
-        validate_email = self.validate_email()
-        validate_number = self.validate_number()
+    def _validate_insert_contact(self):
+        validate_length = self._validate_length()
+        validate_email = self._validate_email()
+        validate_number = self._validate_number()
         if validate_length and validate_email and validate_number == True:
             current_session = self.session.get_session()
-            self.db.contacts.insert_contact(current_session, self.name_entry.get(
-            ), self.address_entry.get(), self.email_entry.get(), self.phone_number_entry.get())
+            self.db.contacts.insert_contact(current_session, self._name_entry.get(
+            ), self._address_entry.get(), self._email_entry.get(), self._phone_number_entry.get())
             showinfo(
                 title="Tiedoksi",
                 message="Yhteystieto lisätty tietokantaan"
@@ -32,11 +32,11 @@ class AddContact:
         self.destroy()
         self.start_add_contact()
 
-    def validate_length(self):
-        if len(self.name_entry.get()) not in range(4, 40) or\
-                len(self.address_entry.get()) not in range(4, 40) or\
-            len(self.phone_number_entry.get()) not in range(4, 40) or\
-                len(self.email_entry.get()) not in range(4, 40):
+    def _validate_length(self):
+        if len(self._name_entry.get()) not in range(4, 40) or\
+                len(self._address_entry.get()) not in range(4, 40) or\
+            len(self._phone_number_entry.get()) not in range(4, 40) or\
+                len(self._email_entry.get()) not in range(4, 40):
             showinfo(
                 title="Tiedoksi",
                 message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
@@ -44,10 +44,10 @@ class AddContact:
             return False
         return True
 
-    def validate_email(self):
+    def _validate_email(self):
         try:
-            first_letter = self.email_entry.get()[0]
-            if '@' and "." not in self.email_entry.get()\
+            first_letter = self._email_entry.get()[0]
+            if '@' and "." not in self._email_entry.get()\
                     or first_letter == "@":
                 showinfo(
                     title="Tiedoksi",
@@ -58,8 +58,8 @@ class AddContact:
             pass
         return True
 
-    def validate_number(self):
-        for character in self.phone_number_entry.get():
+    def _validate_number(self):
+        for character in self._phone_number_entry.get():
             if character.isdigit():
                 return True
         showinfo(
@@ -69,38 +69,38 @@ class AddContact:
         return False
 
     def start_add_contact(self):
-        self.add_contact = ttk.Frame(master=self.root)
-        self.add_contact.pack(padx=10, pady=10, fill='x', expand=True)
+        self._add_contact = ttk.Frame(master=self.root)
+        self._add_contact.pack(padx=10, pady=10, fill='x', expand=True)
 
-        name_label = ttk.Label(master=self.add_contact, text="Nimi")
+        name_label = ttk.Label(master=self._add_contact, text="Nimi")
         name_label.pack(fill='x', expand=True)
 
-        self.name_entry = ttk.Entry(master=self.add_contact)
-        self.name_entry.pack(fill='x', expand=True)
+        self._name_entry = ttk.Entry(master=self._add_contact)
+        self._name_entry.pack(fill='x', expand=True)
 
-        address_label = ttk.Label(master=self.add_contact, text="Osoite")
+        address_label = ttk.Label(master=self._add_contact, text="Osoite")
         address_label.pack(fill='x', expand=True)
 
-        self.address_entry = ttk.Entry(master=self.add_contact)
-        self.address_entry.pack(fill='x', expand=True)
+        self._address_entry = ttk.Entry(master=self._add_contact)
+        self._address_entry.pack(fill='x', expand=True)
 
-        email_label = ttk.Label(master=self.add_contact, text="Sähköposti")
+        email_label = ttk.Label(master=self._add_contact, text="Sähköposti")
         email_label.pack(fill='x', expand=True)
 
-        self.email_entry = ttk.Entry(master=self.add_contact)
-        self.email_entry.pack(fill='x', expand=True)
+        self._email_entry = ttk.Entry(master=self._add_contact)
+        self._email_entry.pack(fill='x', expand=True)
 
         phone_number_label = ttk.Label(
-            master=self.add_contact, text="Puhelinnumero")
+            master=self._add_contact, text="Puhelinnumero")
         phone_number_label.pack(fill='x', expand=True)
 
-        self.phone_number_entry = ttk.Entry(master=self.add_contact)
-        self.phone_number_entry.pack(fill='x', expand=True)
+        self._phone_number_entry = ttk.Entry(master=self._add_contact)
+        self._phone_number_entry.pack(fill='x', expand=True)
 
         add_button = ttk.Button(
-            master=self.add_contact, text="Lisää", command=self.validate_insert_contact)
+            master=self._add_contact, text="Lisää", command=self._validate_insert_contact)
         add_button.pack(fill='x', expand=True, pady=10)
 
         reverse_button = ttk.Button(
-            master=self.add_contact, text="Palaa edelliseen näkymään", command=self.functionality)
+            master=self._add_contact, text="Palaa edelliseen näkymään", command=self.functionality)
         reverse_button.pack(fill='x', expand=True, pady=10)
