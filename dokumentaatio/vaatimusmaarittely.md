@@ -21,3 +21,7 @@ Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella ki
 ## Ideoita sovelluksen laajentamiseen jatkossa
 - Useampi käyttäjärooli
 - Yhteystietojen muokkaaminen
+- Kontaktien jakaminen erilaisiin ryhmiin
+  - Esimerkiksi yksityiset ja töihin liittyvät kontaktit omiin ryhmiin
+- Useampi kielivaihtoehto
+- Mahdollisuus hakea yhteystietoja netistä
