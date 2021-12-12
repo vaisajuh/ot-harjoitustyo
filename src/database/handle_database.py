@@ -22,16 +22,16 @@ class HandleDatabase:
         self.tables = csv_reader.get_database_tables()
         self.users = HandleUsers(self.database)
         self.contacts = HandleContacts(self.database)
-        self.initialize_database()
+        self._initialize_database()
 
-    def initialize_database(self):
+    def _initialize_database(self):
         """Lisää tietokantaan atribuutissa table olevat
         tietokantataulut"""
 
         for i in self.tables:
             self.database.execute(''.join(i))
 
-    def clear_database(self):
+    def _clear_database(self):
         """Poistaa kaiken tiedon tietokannan tauluista"""
 
         self.database.execute('DELETE FROM Users')

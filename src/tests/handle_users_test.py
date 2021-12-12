@@ -5,7 +5,7 @@ from database.handle_database import HandleDatabase
 class TestHandleUsers(unittest.TestCase):
     def setUp(self):
         self.test = HandleDatabase()
-        self.test.clear_database()
+        self.test._clear_database()
         self.user = self.test.users._insert_user("Michelin", "1234")
 
     def test_insert_user(self):
