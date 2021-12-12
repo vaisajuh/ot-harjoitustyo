@@ -1,6 +1,6 @@
 
 class HandleUsers:
-    """Luokka hallinnoi tietokantaan kirjautuneita käyttäjiä 
+    """Luokka hallinnoi tietokantaan kirjautuneita käyttäjiä
     Attributes:
     database: Tietokantayhteys
     """
@@ -27,9 +27,9 @@ class HandleUsers:
         self.database.commit()
 
     def validate_password(self, name: str, password: str):
-        """Hakee käyttäjää tietokannasta ja jos löytyy, niin tarkastaa 
-        salasanan oikeellisuuden. Jos käyttäjää ei löydy tietokannasta, niin 
-        se lisätään sinne. Palauttaa salanan ollessa väärin arvon False ja 
+        """Hakee käyttäjää tietokannasta ja jos löytyy, niin tarkastaa
+        salasanan oikeellisuuden. Jos käyttäjää ei löydy tietokannasta, niin
+        se lisätään sinne. Palauttaa salanan ollessa väärin arvon False ja
         muissa tapauksissa käyttäjän id-numeron"""
 
         count = self.database.execute(
