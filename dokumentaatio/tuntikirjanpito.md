@@ -73,8 +73,8 @@
   </tr>
   <tr>
     <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>3</td>
+    <td>Toiminto yhteystietojen hakemiseen plus muuta koodin hienosäätöä</td>
   </tr>
    <tr>
     <td>-</td>
@@ -87,7 +87,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>33</td>
+    <td>36</td>
     <td>-</td>
   </tr>
 </table>
