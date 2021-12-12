@@ -24,12 +24,9 @@ class ShowContacts:
     def _insert_contacts(self):
         for i in self._tree.get_children():
             self._tree.delete(i)
-        name = self._email_entry.get()
-        address = self._address_entry.get()
-        email = self._email_entry.get()
-        phone_number = self._phone_number_entry.get()
         get_contacts = self.db.contacts.get_contacts(
-            self.session.get_session(), name, address, email, phone_number)
+            self.session.get_session(), self._email_entry.get(), self._address_entry.get(),
+            self._email_entry.get(), self._phone_number_entry.get())
         for i in get_contacts:
             ind = i[4]
             self._tree.insert('', 'end', text=ind,
