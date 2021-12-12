@@ -6,10 +6,10 @@ class TestHandleUsers(unittest.TestCase):
     def setUp(self):
         self.test = HandleDatabase()
         self.test.clear_database()
-        self.user = self.test.users.insert_user("Michelin", "1234")
+        self.user = self.test.users._insert_user("Michelin", "1234")
 
     def test_insert_user(self):
-        get_user = self.test.users.get_user("michelin")
+        get_user = self.test.users._get_user("michelin")
         name = get_user[1]
         password = get_user[2]
         self.assertEqual(name, "michelin")
