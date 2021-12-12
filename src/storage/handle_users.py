@@ -29,7 +29,8 @@ class HandleUsers:
     def validate_password(self, name: str, password: str):
         """Hakee käyttäjää tietokannasta ja jos löytyy, niin tarkastaa 
         salasanan oikeellisuuden. Jos käyttäjää ei löydy tietokannasta, niin 
-        se lisätään sinne"""
+        se lisätään sinne. Palauttaa salanan ollessa väärin arvon False ja 
+        muissa tapauksissa käyttäjän id-numeron"""
 
         count = self.database.execute(
             'SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
