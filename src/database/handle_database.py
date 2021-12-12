@@ -25,7 +25,7 @@ class HandleDatabase:
         self.initialize_database()
 
     def initialize_database(self):
-        """Lisää tietokantaan atribuutissa tablessa olevat
+        """Lisää tietokantaan atribuutissa table olevat
         tietokantataulut"""
 
         for i in self.tables:
