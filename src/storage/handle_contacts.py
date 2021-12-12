@@ -11,7 +11,7 @@ class HandleContacts:
         self.database = database
 
     def get_contacts(self, user_id):
-        """Palauttaa kirjautuneena olevan käyttäjän kontaktit"""
+        """Palauttaa kirjautuneena olevan käyttäjän kontaktit tuplena"""
 
         get_contacts = self.database.execute('SELECT c.name, c.address, c.email, c.phonenumber,'
         ' c.id FROM Users u JOIN Contacts c on u.id = c.user_id WHERE u.id = ?',
