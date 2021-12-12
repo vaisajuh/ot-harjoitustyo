@@ -44,14 +44,14 @@ class Login:
         self._login = ttk.Frame(master=self.root)
         self._login.pack(padx=10, pady=10, fill='x', expand=True)
 
-        self._username_label = ttk.Label(master=self._login, text="Käyttäjänimi")
-        self._username_label.pack(fill='x', expand=True)
+        username_label = ttk.Label(master=self._login, text="Käyttäjänimi")
+        username_label.pack(fill='x', expand=True)
 
         self._username_entry = ttk.Entry(master=self._login)
         self._username_entry.pack(fill='x', expand=True)
 
-        self._password_label = ttk.Label(master=self._login, text="Salasana")
-        self._password_label.pack(fill='x', expand=True)
+        password_label = ttk.Label(master=self._login, text="Salasana")
+        password_label.pack(fill='x', expand=True)
 
         self._password_entry = ttk.Entry(master=self._login, show="*")
         self._password_entry.pack(fill='x', expand=True)
