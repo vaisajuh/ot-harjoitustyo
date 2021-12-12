@@ -7,24 +7,24 @@ class Functionality:
         self.login = login
         self.add_contact = add_contact
         self.show_contacts = show_contacts
-        self.functionality = None
+        self._functionality = None
 
     def destroy(self):
-        self.functionality.destroy()
+        self._functionality.destroy()
 
     def start_functionality(self):
         self.root.geometry('300x300')
-        self.functionality = ttk.Frame(master=self.root)
-        self.functionality.pack(padx=10, pady=10, fill='x', expand=True)
+        self._functionality = ttk.Frame(master=self.root)
+        self._functionality.pack(padx=10, pady=10, fill='x', expand=True)
 
         get_button = ttk.Button(
-            master=self.functionality, text="Hae yhteystiedot", command=self.show_contacts)
+            master=self._functionality, text="Hae yhteystiedot", command=self.show_contacts)
         get_button.pack(fill='x', expand=True, pady=10)
 
         add_button = ttk.Button(
-            master=self.functionality, text="Lisää yhteystieto", command=self.add_contact)
+            master=self._functionality, text="Lisää yhteystieto", command=self.add_contact)
         add_button.pack(fill='x', expand=True, pady=10)
 
         logout_button = ttk.Button(
-            master=self.functionality, text="Kirjaudu ulos", command=self.login)
+            master=self._functionality, text="Kirjaudu ulos", command=self.login)
         logout_button.pack(fill='x', expand=True, pady=10)
