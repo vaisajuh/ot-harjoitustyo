@@ -1,6 +1,6 @@
-from tkinter import Toplevel, ttk
-from tkinter.constants import CENTER, N
-from typing import Text
+from tkinter import ttk
+from tkinter.constants import CENTER
+
 
 
 class ShowContacts:
