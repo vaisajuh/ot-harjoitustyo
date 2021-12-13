@@ -59,15 +59,13 @@ class ShowContacts:
         self._tree.heading("# 4", text="Puhelinnumero")
         self._insert_contacts()
         self._tree.grid()
-
+        delete_button = ttk.Button(
+            master=self._show_contacts, text="Poista", command=self._delete_button)
+        delete_button.grid()
     
     def search_contacts(self):
         self._search_contacts = ttk.Frame(master=self.root)
         self._search_contacts.grid(row=0, column=1)
-
-        delete_button = ttk.Button(
-            master=self._search_contacts, text="Poista", command=self._delete_button)
-        delete_button.grid(row=1, column=1)
 
         reverse_button = ttk.Button(
             master=self._search_contacts, text="Palaa edelliseen näkymään", command=self.functionality)
