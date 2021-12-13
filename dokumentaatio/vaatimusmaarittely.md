@@ -11,7 +11,7 @@ Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella ki
 ### Toiminnallisuus sovelluksen sisällä
 - Käyttäjä voi tehdä hakuja tietokantaan hakeakseen yhteystietoja
   - [x] Kaikki yhteystiedot kerralla
-  - [ ] Käyttäjän määrittelemät hakusanat
+  - [x] Käyttäjän määrittelemät hakusanat
   - [x] Käyttäjä voi tässä yhteydessä poistaa yhteystiedon
 - Käyttäjä voi luoda uuden yhteystiedon
   - [x] Tämä sisältää nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
