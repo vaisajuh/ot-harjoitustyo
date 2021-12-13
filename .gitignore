@@ -21,4 +21,5 @@ src/.coverage
 src/data/contacts_database.db
 src/database/__pycache__/
 src/reader/__pycache__/
-
+.gitignore.save
+.gitignore.save.1
