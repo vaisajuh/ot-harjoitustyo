@@ -1,6 +1,6 @@
 # Arkkitehtuurikuvaus
 ## Käyttöliittymä
-Käyttöliittymä on neljä näkymää:
+Käyttöliittymällä on neljä näkymää:
 - Kirjautuminen
 - Ohjelman toiminallisuus
 - Yhteystietojen lisääminen
@@ -17,6 +17,11 @@ Kuva esittää sovelluksen käyttölogiikasta vastaavien luokkien suhdetta. <br>
 ### Luokka- ja pakkauskaaviot
 Allaoleva kaavio kuvaa pakkausten ja luokkien välistä suhdetta. Pakkauksessa <strong>Storage</strong> ja <strong>Reader</strong> olevat luokat injektoidaan ensiksi paketissa database olevaan luokkaan <strong>HandleDatabase</strong>, ja tämä kokonaisuus injektoidaan luokkaan <strong>Main</strong>. Seuraavaksi <strong>Mainiin</strong> vielä liitetään paketissa Session oleva luokka <strong>HandleSession</strong>, ja tämä luokassa <strong>Main</strong> oleva kokonaisuus annetaan paketissa Ui sijaitsevalle luokalle <strong>Ui</strong>, jossa sijaisee sovelluksen käyttöliittymä.<br>
 ![pakkaus](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/uusip.png)
+
+## Tietojen pysyväistallennus
+Pakkauksen storage luokat <strong>HandleUsers</strong> ja <strong>HandleContacs</strong> vastaavat tietokannan tietojen käsittelystä. <strong>HandelUsers</strong>-luokka tallentaa käyttäjiä tietokantaan ja tarkastaa käyttäjien salasanojen oikeellisuuden. <strong>HandleContacts</strong>-luokan vastuulla on yhteystietojen tallentamineen tietokantaan, niiden poistaminen ja palauttaminen käyttöliittymälle tulostettavaksi.
+
+Pakkauksessa database sijaitseva <strong>HandleDatabase</strong>-luokka tarjoaa tallennuslogiikasta vastaaville luokille tietokantayhteyden SQLite-tietokantaan. Pakettissa reader sijaitseva moduulissa luetaan CSV-tiedostosta tarvittavat tietokantataulut, ja luokka <strong>HandleDabase</strong> huolehtii taulujen lisäämisestä tietokantaan.
 
 ## Päätoiminallisuudet
 Tässsä osiossa selitettynä ja sekvenssikaavioina kuvattuna ohjelman päätoiminnallisuudet.
