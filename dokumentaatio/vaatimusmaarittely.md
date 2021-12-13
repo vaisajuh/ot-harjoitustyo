@@ -7,7 +7,7 @@ Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella ki
 ### Kirjautuminen
 - Ensimmäisen kirjautumisen yhteydessä käyttäjälle luodaan käyttäjätunnus ja salasana, jos sellaista ei ole ennestään
   - [x]  Käyttäjä valitsee itse nämä tiedot ja syöttää kenttiin
-  - [x] Tunnuksen ja salasanan pituuden tulee olla neljän ja kahdenkymmenen merkin väliltä
+  - [x] Tunnuksen ja salasanan pituuden tulee olla kolmen ja kahdenkymmenen merkin väliltä
 ### Toiminnallisuus sovelluksen sisällä
 - Käyttäjä voi tehdä hakuja tietokantaan hakeakseen yhteystietoja
   - [x] Kaikki yhteystiedot kerralla
