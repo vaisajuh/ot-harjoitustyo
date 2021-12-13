@@ -77,6 +77,11 @@
     <td>Toiminto yhteystietojen hakemiseen plus muuta koodin hienosäätöä</td>
   </tr>
    <tr>
+    <td>13.12</td>
+    <td>1</td>
+    <td>Tietokantalogiikalle oma testinsä plus muuta koodin säätämistä</td>
+  </tr>
+  <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -87,7 +92,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>36</td>
+    <td>37</td>
     <td>-</td>
   </tr>
 </table>
