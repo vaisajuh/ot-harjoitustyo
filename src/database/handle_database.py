@@ -31,9 +31,6 @@ class HandleDatabase:
 
         for i in self.tables:
             self.database.execute(i[0])
-        
-        for i in self.tables:
-            print(i[0])
 
     def _clear_database(self):
         """Poistaa kaiken tiedon tietokannan tauluista"""
