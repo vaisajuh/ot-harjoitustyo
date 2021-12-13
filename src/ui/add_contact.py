@@ -33,10 +33,10 @@ class AddContact:
         self.start_add_contact()
 
     def _validate_length(self):
-        if len(self._name_entry.get()) not in range(3, 40) or\
-                len(self._address_entry.get()) not in range(3, 40) or\
-            len(self._phone_number_entry.get()) not in range(3, 40) or\
-                len(self._email_entry.get()) not in range(3, 40):
+        if len(self._name_entry.get()) not in range(3, 20) or\
+                len(self._address_entry.get()) not in range(5, 20) or\
+            len(self._phone_number_entry.get()) not in range(5, 20) or\
+                len(self._email_entry.get()) not in range(5, 20):
             showinfo(
                 title="Tiedoksi",
                 message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
