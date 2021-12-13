@@ -16,11 +16,12 @@ Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella ki
 - Käyttäjä voi luoda uuden yhteystiedon
   - [x] Tämä sisältää nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
   - [x] Käyttäjän syötteen tarkastaminen
+- Yhteystietojen muokkaaminen
+  - [ ] Käyttäjä voi muokata olemassaolevia yhteystietoja
 - Kirjautuminen ulos
   - [x] Käyttäjän kirjautuminen ulos sovelluksesta vie takaisin aloitusnäkymään 
 ## Ideoita sovelluksen laajentamiseen jatkossa
 - Useampi käyttäjärooli
-- Yhteystietojen muokkaaminen
 - Kontaktien jakaminen erilaisiin ryhmiin
   - Esimerkiksi yksityiset ja töihin liittyvät kontaktit omiin ryhmiin
 - Useampi kielivaihtoehto
