@@ -7,7 +7,7 @@ Kuva esittää sovelluksen käyttölogiikasta vastaavien luokkien suhdetta. <br>
 Ensiksi pakkauksen <strong>store</strong> luokat injektoidaan luokkaan <strong>handledatabase,</strong> ja nämä injektoidaan luokkaan <strong>main.</strong> Luokkaan <strong>Main</strong> injektoidaan vielä pakkauksen <strong>session</strong> luokka <strong>handle_session,</strong>
  ja lopuksi tämä kokonaisuus siirretään käyttöliittymästä vastaavalle luokalle <strong>ui.</strong> Punainen viiva pakkausten <strong>session</strong>
  ja <strong>store</strong> välillä on piirretty kuvaamaan niiden sisältämien luokkien välistä epäsuoraa yhteyttä.<br>
-![pakkaus](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/pakkaus.png)
+![pakkaus](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/uusip.png)
 ## Päätoiminallisuudet
 Tässsä osiossa selitettynä ja sekvenssikaavioina kuvattuna ohjelman päätoiminnallisuudet.
 ### Kirjautuminen
