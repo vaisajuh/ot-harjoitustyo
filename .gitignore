@@ -12,6 +12,7 @@ src/storage/__pycache__/
 src/tests/__pycache__/
 src/tests/session/__pycache__/
 src/tests/storage/__pycache__/
+src/tests/database/__pycache__/
 src/session/__pycache__/
 htmlcov
 .coverage
