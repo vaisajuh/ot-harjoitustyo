@@ -18,6 +18,7 @@ class HandleDatabase:
 
     def __init__(self):
         """Luokan konstruktori, joka alustaa muuttujat"""
+        
         self.database = sqlite3.connect(CONTACTS_DATABASE_PATH)
         self.tables = csv_reader.get_database_tables()
         self.users = HandleUsers(self.database)
@@ -37,3 +38,4 @@ class HandleDatabase:
         self.database.execute('DELETE FROM Users')
         self.database.execute('DELETE FROM Contacts')
         self.database.commit()
+
