@@ -1,4 +1,12 @@
 # Arkkitehtuurikuvaus
+## Käyttöliittymä
+Käyttöliittymä on neljä näkymää:
+- Kirjautuminen
+- Ohjelman toiminallisuus
+- Yhteystietojen lisääminen
+- Yhteystietojen näyttäminen
+
+Sovelluksessa on kerralla näkyvillä yksi näkymä, ja näkymien näyttämisestä vastaa Ui-luokka. Toiminnallisuudesta tarkemmin alla.
 
 ## Sovelluslogiikka
 
@@ -7,7 +15,7 @@ Kuva esittää sovelluksen käyttölogiikasta vastaavien luokkien suhdetta. <br>
 ![luokat](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/luokat1.png)
 
 ### Luokka- ja pakkauskaaviot
-Allaoleva kaavio kuvaa pakkausten ja luokkien välistä suhdetta. Pakkauksessa <strong>Storage</strong> ja <strong>Reader</strong> olevat luokat injektoidaan ensiksi paketissa database olevaan luokkaan <strong>HandleDatabase</strong>, ja tämä kokonaisuus injektoidaan luokkaan <strong>Main</strong>. Seuraavaksi <strong>Mainiin</strong> vielä liitetään paketissa Session oleva luokka <strong>HandleSession</strong>, ja tämä luokassa <strong>Main</strong> oleva kokonaisuus annetaan paketissa Ui sijaitsevalle luokalle <strong>Ui</strong>, jossa sijaisee sovelluksen käyttöliittymä.
+Allaoleva kaavio kuvaa pakkausten ja luokkien välistä suhdetta. Pakkauksessa <strong>Storage</strong> ja <strong>Reader</strong> olevat luokat injektoidaan ensiksi paketissa database olevaan luokkaan <strong>HandleDatabase</strong>, ja tämä kokonaisuus injektoidaan luokkaan <strong>Main</strong>. Seuraavaksi <strong>Mainiin</strong> vielä liitetään paketissa Session oleva luokka <strong>HandleSession</strong>, ja tämä luokassa <strong>Main</strong> oleva kokonaisuus annetaan paketissa Ui sijaitsevalle luokalle <strong>Ui</strong>, jossa sijaisee sovelluksen käyttöliittymä.<br>
 ![pakkaus](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/uusip.png)
 
 ## Päätoiminallisuudet
