@@ -18,7 +18,7 @@ class HandleDatabase:
 
     def __init__(self):
         """Luokan konstruktori, joka alustaa muuttujat"""
-        
+
         self.database = sqlite3.connect(CONTACTS_DATABASE_PATH)
         self.tables = csv_reader.get_database_tables()
         self.users = HandleUsers(self.database)
@@ -30,7 +30,10 @@ class HandleDatabase:
         tietokantataulut"""
 
         for i in self.tables:
-            self.database.execute(''.join(i))
+            self.database.execute(i[0])
+        
+        for i in self.tables:
+            print(i[0])
 
     def _clear_database(self):
         """Poistaa kaiken tiedon tietokannan tauluista"""
@@ -38,4 +41,3 @@ class HandleDatabase:
         self.database.execute('DELETE FROM Users')
         self.database.execute('DELETE FROM Contacts')
         self.database.commit()
-
