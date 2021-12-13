@@ -21,7 +21,7 @@ Allaoleva kaavio kuvaa pakkausten ja luokkien välistä suhdetta. Pakkauksessa <
 ## Tietojen pysyväistallennus
 Pakkauksen storage luokat <strong>HandleUsers</strong> ja <strong>HandleContacs</strong> vastaavat tietokannan tietojen käsittelystä. <strong>HandelUsers</strong>-luokka tallentaa käyttäjiä tietokantaan ja tarkastaa käyttäjien salasanojen oikeellisuuden. <strong>HandleContacts</strong>-luokan vastuulla on yhteystietojen tallentamineen tietokantaan, niiden poistaminen ja palauttaminen käyttöliittymälle tulostettavaksi.
 
-Pakkauksessa database sijaitseva <strong>HandleDatabase</strong>-luokka tarjoaa tallennuslogiikasta vastaaville luokille tietokantayhteyden SQLite-tietokantaan. Pakettissa reader sijaitseva moduulissa luetaan CSV-tiedostosta tarvittavat tietokantataulut, ja luokka <strong>HandleDabase</strong> huolehtii taulujen lisäämisestä tietokantaan.
+Pakkauksessa database sijaitseva <strong>HandleDatabase</strong>-luokka tarjoaa tallennuslogiikasta vastaaville luokille tietokantayhteyden SQLite-tietokantaan. Pakettissa reader sijaitseva moduulissa luetaan CSV-tiedostosta tarvittavat tietokantataulut, ja luokka <strong>HandleDabase</strong> huolehtii taulujen lisäämisestä tietokantaan. Tiedosto [.env](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/.env) määrittelee tietokanta- ja csv-tiedostojen nimet. 
 
 ## Päätoiminallisuudet
 Tässsä osiossa selitettynä ja sekvenssikaavioina kuvattuna ohjelman päätoiminnallisuudet.
