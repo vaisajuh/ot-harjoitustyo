@@ -82,17 +82,27 @@
     <td>Tietokantalogiikalle oma testinsä plus muuta koodin säätämistä</td>
   </tr>
   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>14.12</td>
+    <td>2</td>
+    <td>Mahdollisuus yhteystietojen muokkaamiseen ja tälle omat testinsä</td>
   </tr>
    <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
     <td>yht</td>
-    <td>37</td>
+    <td>39</td>
     <td>-</td>
   </tr>
 </table>
