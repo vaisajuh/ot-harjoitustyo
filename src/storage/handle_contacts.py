@@ -19,7 +19,7 @@ class HandleContacts:
         phone_number = "%" + phone_number + "%"
         get_contacts = self.database.execute('SELECT c.name, c.address, c.email, c.phonenumber,'
         ' c.id FROM Users u JOIN Contacts c on u.id = c.user_id WHERE u.id = ? AND (c.name LIKE'
-        ' ? OR c.address LIKE ? OR c.email LIKE ? OR c.phonenumber LIKE ?)',
+        ' ? OR c.address LIKE ? OR c.email LIKE ? OR c.phonenumber LIKE ?) GROUP BY c.name',
         [user_id, name, address, email, phone_number]).fetchall()
         return get_contacts
 
