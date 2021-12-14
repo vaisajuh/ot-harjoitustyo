@@ -38,17 +38,18 @@ class HandleContacts:
 
         self.database.execute('DELETE FROM Contacts WHERE id = ?', [row_id])
         self.database.commit()
-    
+
     def get_row(self, row_id: int):
         """Toiminto palauttaa yhteystiedon käyttöliittymään käyttäjän muokattavaksi"""
 
         get_row = self.database.execute('SELECT c.name, c.address, c.email, c.phonenumber,'
-        ' c.id FROM Users u JOIN Contacts c on u.id = c.user_id WHERE c.id = ?', [row_id]).fetchone()
+        ' c.id FROM Users u JOIN Contacts c on u.id = c.user_id WHERE c.id = ?',
+        [row_id]).fetchone()
         return get_row
-    
+
     def update_row(self, row_id: int, name: str, address: str, email: str, phone_number: str):
         """Toiminto yhteystiedon päivittämiseen"""
 
-        self.database.execute('UPDATE Contacts SET name = ?, address = ?, email = ?, phonenumber = ?' 
-        ' WHERE id = ?',[name, address, email, phone_number, row_id])
+        self.database.execute('UPDATE Contacts SET name = ?, address = ?, email = ?,'
+        ' phonenumber = ? WHERE id = ?',[name, address, email, phone_number, row_id])
         self.database.commit()
