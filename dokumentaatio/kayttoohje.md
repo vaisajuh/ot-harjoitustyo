@@ -46,11 +46,11 @@ Kun tiedot on lisätty kenttiin, niin tiedot saa lisättyä tietokantaan painama
 Nappi <strong>palaa edelliseen näkymään</strong> vie nimensä mukaisesti takaisin ikkunaan, jossa näkyy ohjelman toiminallisuus.
  
  ## Yhteystietojen näyttäminen
- Seuraavassa näkymä yhtestietojen näyttämiseen:
- Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjatuneen käyttäjän henkilökohtaisesta lista yhteystietoja. Syötteiden pituutta ei ole rajoitettu.
+ Seuraavassa näkymä yhtestietojen näyttämiseen: <br>
+ ![show](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/show_contacts.png)<br>
+ Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjatuneen käyttäjän henkilökohtaisesta listasta yhteystietoja. Syötteiden pituutta ei ole rajoitettu.
  Jos käyttäjä haluaa poistaa yhteystiedon, niin se tapahtuu maalaamalla listasta kyseisen tiedon ja painamalla nappia <strong>poista</strong>. Edelliseen näkymään
  pääsee paimalla nappia <strong>palaa edelliseen näkymään</strong><br>
- ![show](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/show_contacts.png)<br>
  
 
 
