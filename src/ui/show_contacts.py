@@ -1,5 +1,6 @@
-from tkinter import ttk
-from tkinter.constants import CENTER
+from tkinter import Entry, ttk
+from tkinter.constants import CENTER, END
+from tkinter import Tk
 
 
 
@@ -10,6 +11,7 @@ class ShowContacts:
         self.db = db
         self.session = session
         self._show_contacts = None
+        self._edit_buttons = None
         self._tree = None
         self._search_contacts = None
         self._name_entry = None
@@ -20,6 +22,7 @@ class ShowContacts:
     def destroy(self):
         self._show_contacts.destroy()
         self._search_contacts.destroy()
+        self._edit_buttons.destroy()
 
     def _insert_contacts(self):
         for i in self._tree.get_children():
@@ -41,12 +44,69 @@ class ShowContacts:
             self.start_show_contacts()
         except:
             pass
+    
+    def _edit_button(self):
+        try:
+            row_value = self._tree.focus()
+            row_id = int(self._tree.item(row_value)["text"])
+            get_row = self.db.contacts.get_row(row_id)
+            self._update_view(get_row, row_id)
+        except:
+            pass
+
+    def _update_view(self, row, row_id):
+        update_view = Tk()
+        update_view.geometry('300x300')
+        update_view.title('Muokkaa')
+        
+        user_entries = ttk.Frame(master=update_view)
+        user_entries.pack(padx=10, pady=10, fill='x', expand=True)
+
+        name_label = ttk.Label(master=user_entries, text="Nimi")
+        name_label.pack(fill='x', expand=True)
+
+        name = Entry(user_entries)
+        name.insert(END, row[0])
+        name.pack(fill='x', expand=True)
+
+        address_label = ttk.Label(master=user_entries, text="Osoite")
+        address_label.pack(fill='x', expand=True)
+
+        address = Entry(user_entries)
+        address.insert(END, row[1])
+        address.pack(fill='x', expand=True)
+
+        email_label = ttk.Label(master=user_entries, text="Email")
+        email_label.pack(fill='x', expand=True)
+
+        email = Entry(user_entries)
+        email.insert(END, row[2])
+        email.pack(fill='x', expand=True)
+
+        phone_number_label = ttk.Label(master=user_entries, text="Puhelinnumero")
+        phone_number_label.pack(fill='x', expand=True)
+
+        number = Entry(user_entries)
+        number.insert(END, row[3])
+        number.pack(fill='x', expand=True)
+
+        add_button = ttk.Button(
+            master=user_entries, text="Muokkaa", command=lambda: self._update_contact(row_id, name.get(), address.get(), email.get(), number.get()))
+        add_button.pack(fill='x', expand=True, pady=10)
+
+        update_view.mainloop()
+
+    def _update_contact(self, row_id, name, address, email, number):
+        self.db.contacts.update_row(row_id, name, address, email, number)
+        self.destroy()
+        self.start_show_contacts()
 
     def start_show_contacts(self):
         self.root.geometry('')
         self._show_contacts = ttk.Frame(master=self.root)
         self._show_contacts.grid()
-        self.search_contacts()
+        self._search_fuctionality()
+        self._edit_contacts()
         self._tree = ttk.Treeview(master=self._show_contacts, column=(
             "Nimi", "Osoite", "Email", "Puhelinnumero"), show='headings')
         self._tree.column("# 1", anchor=CENTER)
@@ -59,41 +119,52 @@ class ShowContacts:
         self._tree.heading("# 4", text="Puhelinnumero")
         self._insert_contacts()
         self._tree.grid()
-        delete_button = ttk.Button(
-            master=self._show_contacts, text="Poista", command=self._delete_button)
-        delete_button.grid()
     
-    def search_contacts(self):
-        self._search_contacts = ttk.Frame(master=self.root)
-        self._search_contacts.grid(row=0, column=1)
+    def _edit_contacts(self):
+        self._edit_buttons = ttk.Frame(master=self.root)
+        self._edit_buttons.grid(row=1, column=0)
+        
+        delete_button = ttk.Button(
+            master=self._edit_buttons, text="Poista", command=self._delete_button)
+        delete_button.grid(row=0, column=0, padx=10, pady=10)
+
+        edit_button = ttk.Button(
+            master=self._edit_buttons, text="Muokkaa", command=self._edit_button)
+        edit_button.grid(row=0, column=1, padx=10, pady=10)
 
         reverse_button = ttk.Button(
-            master=self._search_contacts, text="Palaa edelliseen näkymään", command=self.functionality)
-        reverse_button.grid(row=10, column=1)
+            master=self._edit_buttons, text="Palaa edelliseen näkymään", command=self.functionality)
+        reverse_button.grid(row=0, column=3, padx=10, pady=10)
+
+
+    
+    def _search_fuctionality(self):
+        self._search_contacts = ttk.Frame(master=self.root)
+        self._search_contacts.grid(row=0, column=2)
         
         name_label = ttk.Label(master=self._search_contacts, text="Nimi")
-        name_label.grid(row=1)
+        name_label.grid(row=1, padx=5, pady=3)
         
         self._name_entry = ttk.Entry(master=self._search_contacts)
-        self._name_entry.grid(row=2)
+        self._name_entry.grid(row=2, padx=5, pady=3)
         
         address_label = ttk.Label(master=self._search_contacts, text="Osoite")
-        address_label.grid(row=3)
+        address_label.grid(row=3, padx=5, pady=3)
         
         self._address_entry = ttk.Entry(master=self._search_contacts)
-        self._address_entry.grid(row=4)
+        self._address_entry.grid(row=4, padx=5, pady=3)
 
         email_label = ttk.Label(master=self._search_contacts, text="Sähköposti")
-        email_label.grid(row=5)
+        email_label.grid(row=5, padx=5, pady=3)
         
         self._email_entry = ttk.Entry(master=self._search_contacts)
-        self._email_entry.grid(row=6)
+        self._email_entry.grid(row=6, padx=5, pady=3)
 
         phone_number_label = ttk.Label(master=self._search_contacts, text="Puhelinnumero")
-        phone_number_label.grid(row=7)
+        phone_number_label.grid(row=7, padx=5, pady=3)
         
         self._phone_number_entry = ttk.Entry(master=self._search_contacts)
-        self._phone_number_entry.grid(row=8)
+        self._phone_number_entry.grid(row=8, padx=5, pady=3)
 
         search_button = ttk.Button(master=self._search_contacts, text="Hae", command=self._insert_contacts)
-        search_button.grid(row=9)
+        search_button.grid(row=9, padx=5, pady=3)
