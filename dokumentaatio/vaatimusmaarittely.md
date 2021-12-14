@@ -11,13 +11,13 @@ Sovelluksen tarkoituksena on tallentaa yhteystietoja tietokantaan. Jokaisella ki
 ### Toiminnallisuus sovelluksen sisällä
 - Käyttäjä voi tehdä hakuja tietokantaan hakeakseen yhteystietoja
   - [x] Kaikki yhteystiedot kerralla
-  - [x] Käyttäjän määrittelemät hakusanat
+  - [x] Käyttäjän määrittelemät hakusanat <strong>TEHTY</strong>
   - [x] Käyttäjä voi tässä yhteydessä poistaa yhteystiedon
 - Käyttäjä voi luoda uuden yhteystiedon
   - [x] Tämä sisältää nimen, osoitteen, puhelinnumeron ja sähköpostiosoitteen
   - [x] Käyttäjän syötteen tarkastaminen
 - Yhteystietojen muokkaaminen
-  - [x] Käyttäjä voi muokata olemassaolevia yhteystietoja
+  - [x] Käyttäjä voi muokata olemassaolevia yhteystietoja <strong>TEHTY</strong>
 - Kirjautuminen ulos
   - [x] Käyttäjän kirjautuminen ulos sovelluksesta vie takaisin aloitusnäkymään 
 ## Ideoita sovelluksen laajentamiseen jatkossa
