@@ -6,7 +6,7 @@ sisällä sijaitsevaan kansioon data. Tässä kansiossa sijaitsee myös tietokan
 vapaasti muokata, ilman sovelluslogiikan uudelleen muotoilua.
 
 ## Ohjelman käynnistäminen
-Ohjelman tarvitsemat riippvuudet käynnistetään komennolla:
+Ohjelman tarvitsemat riippuvuudet käynnistetään komennolla:
 <pre>poetry install</pre>
 Ohjelma käynnistyy komennolla:
 <pre>poetry run invoke start</pre>
@@ -46,10 +46,9 @@ Kun tiedot on lisätty kenttiin, niin tiedot saa lisättyä tietokantaan painama
 Nappi <strong>palaa edelliseen näkymään</strong> vie nimensä mukaisesti takaisin ikkunaan, jossa näkyy ohjelman toiminallisuus.
  
  ## Yhteystietojen näyttäminen
- Seuraavassa näkymä yhtestietojen näyttämiseen: <br>
+ Seuraavassa näkymä yhteystietojen näyttämiseen: <br>
  ![show](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/show_contacts.png)<br>
- Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjatuneen käyttäjän henkilökohtaisesta listasta yhteystietoja. Syötteiden pituutta ei ole rajoitettu.
- Jos käyttäjä haluaa poistaa yhteystiedon, niin se tapahtuu maalaamalla listasta kyseisen tiedon ja painamalla nappia <strong>poista</strong>. Edelliseen näkymään
+ Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjatuneen käyttäjän henkilökohtaisesta listasta yhteystietoja. Jos käyttäjä haluaa poistaa yhteystiedon, niin se tapahtuu valitsemalla listasta kyseisen tiedon ja painamalla nappia <strong>poista</strong>. Olemassaolevia yhteystietoja voi muokatava valitsemalla listasta kyseisen tiedon painamalla nappia <strong>muokkaa</strong>, jolloin aukea uusi ikkuna muokkausta varten. Edelliseen näkymään
  pääsee paimalla nappia <strong>palaa edelliseen näkymään</strong><br>
  
 
