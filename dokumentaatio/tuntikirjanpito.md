@@ -92,7 +92,7 @@
     <td>Oma näkymä tunnuksen luontiin</td>
   </tr>
   <tr>
-    <td>-</td>
+    <td>20.12</td>
     <td>1</td>
     <td>HandleUsers-luokan metodien uudelleen muotoilua ja tästä syystä myös testien päivittämistä</td>
   </tr>
