@@ -17,7 +17,7 @@ class HandleUsers:
             'SELECT id, name, password FROM Users WHERE name like ?', [name]).fetchall()
         return list(get_user[0])
 
-    def _insert_user(self, name: str, password: str):
+    def insert_user(self, name: str, password: str):
         """Luo uuden käyttäjän tietokantaan"""
 
         name = name.lower()
@@ -37,9 +37,9 @@ class HandleUsers:
 
         count = self.database.execute(
             'SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
-        if int(count) == 1:
+        if count == 1:
             get_id = self._get_user(name)[0]
             get_password = self._get_user(name)[2]
-            if str(get_password) == password:
+            if get_password == password:
                 return int(get_id)
         return False

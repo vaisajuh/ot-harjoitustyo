@@ -17,7 +17,7 @@ class AddUser:
     def _add_user(self):
         if len(self._username_entry.get()) in range(3, 20) and\
                 len(self._password_entry.get()) in range(3, 20):
-            exists = self.db.users._insert_user(self._username_entry.get(), self._password_entry.get())
+            exists = self.db.users.insert_user(self._username_entry.get(), self._password_entry.get())
             if exists is True:
                 showinfo(
                 title="Tiedoksi",

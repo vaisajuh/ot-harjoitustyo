@@ -6,19 +6,23 @@ class TestHandleUsers(unittest.TestCase):
     def setUp(self):
         self.test = HandleDatabase()
         self.test._clear_database()
-        self.user = self.test.users._insert_user("Michelin", "1234")
+        self.user = self.test.users.insert_user("Michelin", "1234")
 
     def test_insert_user(self):
         get_user = self.test.users._get_user("michelin")
+        add_user = self.test.users.insert_user("michelin", "1234")
         name = get_user[1]
         password = get_user[2]
         self.assertEqual(name, "michelin")
         self.assertEqual(password, "1234")
+        self.assertEqual(add_user, False)
 
     def test_validate_password(self):
+        new_user = self.test.users.validate_password("kate", "1234")
         invalid_pass = self.test.users.validate_password("Michelin", "1235")
-        self.assertEqual(invalid_pass, False)
         correct_pass = self.test.users.validate_password("Michelin", "1234")
+        self.assertEqual(invalid_pass, False)
         self.assertEqual(correct_pass, 1)
+        self.assertEqual(new_user, False)
     
-    
+
