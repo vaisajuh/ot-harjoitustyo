@@ -87,22 +87,32 @@
     <td>Mahdollisuus yhteystietojen muokkaamiseen ja tälle omat testinsä</td>
   </tr>
    <tr>
+    <td>19.12</td>
+    <td>1</td>
+    <td>Oma näkymä tunnuksen luontiin</td>
+  </tr>
+  <tr>
     <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>1</td>
+    <td>HandleUsers-luokan metodien uudelleen muotoilua ja tästä syystä myös testien päivittämistä</td>
   </tr>
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
-  <tr>
+   <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>39</td>
+    <td>41</td>
     <td>-</td>
   </tr>
 </table>
