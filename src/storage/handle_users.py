@@ -22,25 +22,24 @@ class HandleUsers:
 
         name = name.lower()
         password = password.lower()
-        self.database.execute(
-            'INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
-        self.database.commit()
+        count = self.database.execute(
+            'SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
+        if count == 0:
+            self.database.execute(
+                'INSERT INTO Users (name, password) VALUES (?,?)', [name, password])
+            self.database.commit()
+            return True
+        return False
+  
 
     def validate_password(self, name: str, password: str):
-        """Hakee käyttäjää tietokannasta ja jos löytyy, niin tarkastaa
-        salasanan oikeellisuuden. Jos käyttäjää ei löydy tietokannasta, niin
-        se lisätään sinne. Palauttaa salanan ollessa väärin arvon False ja
-        muissa tapauksissa käyttäjän id-numeron"""
+        """Hakee käyttäjää tietokannasta ja jos löytyy, niin palauttaa käyttäjän id-numeron."""
 
         count = self.database.execute(
             'SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
-        get_id = ""
         if int(count) == 1:
             get_id = self._get_user(name)[0]
             get_password = self._get_user(name)[2]
             if str(get_password) == password:
                 return int(get_id)
-            return False
-        self._insert_user(name, password)
-        get_id = self._get_user(name)[0]
-        return int(get_id)
+        return False

@@ -3,11 +3,12 @@ from tkinter.messagebox import showwarning
 
 
 class Login:
-    def __init__(self, root, functionality, db, session):
+    def __init__(self, root, functionality, db, session, user):
         self.root = root
         self.functionality = functionality
         self.db = db
         self.session = session
+        self.user = user
         self._login = None
         self._username_entry = None
         self._password_entry = None
@@ -33,7 +34,7 @@ class Login:
         if validate == False:
             showwarning(
                 title="Tiedoksi",
-                message="Väärä salasana!"
+                message="Salasana on väärä tai käyttäjää ei ole tietokannassa!"
             )
         else:
             self.session.add_session(validate)
@@ -59,3 +60,7 @@ class Login:
         login_button = ttk.Button(
             master=self._login, text="Kirjaudu", command=self._validate_login)
         login_button.pack(fill='x', expand=True, pady=10)
+
+        add_user_button = ttk.Button(
+            master=self._login, text="Lisää käyttäjä", command=self.user)
+        add_user_button.pack(fill='x', expand=True, pady=10)

@@ -2,6 +2,7 @@ from ui.login import Login
 from ui.functionality import Functionality
 from ui.add_contact import AddContact
 from ui.show_contacts import ShowContacts
+from ui.add_user import AddUser
 
 
 class UI:
@@ -19,7 +20,7 @@ class UI:
     def start_login(self):
         self.destroy_current_view()
         self.current_view = Login(
-            self.root, self.start_functionality, self.db, self.session)
+            self.root, self.start_functionality, self.db, self.session, self.start_add_user)
         self.current_view.start_login()
 
     def start_functionality(self):
@@ -39,3 +40,10 @@ class UI:
         self.current_view = ShowContacts(
             self.root, self.start_functionality, self.db, self.session)
         self.current_view.start_show_contacts()
+    
+    def start_add_user(self):
+        self.destroy_current_view()
+        self.current_view = AddUser(
+            self.root, self.start_login, self.db)
+        self.current_view.start_add_user()
+        

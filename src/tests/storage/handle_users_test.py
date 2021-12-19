@@ -20,7 +20,5 @@ class TestHandleUsers(unittest.TestCase):
         self.assertEqual(invalid_pass, False)
         correct_pass = self.test.users.validate_password("Michelin", "1234")
         self.assertEqual(correct_pass, 1)
-
-    def test_validate_count_0(self):
-        user_creation = self.test.users.validate_password("Monica", "1234")
-        self.assertEqual(user_creation, 2)
+    
+    
