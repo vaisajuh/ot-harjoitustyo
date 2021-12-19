@@ -30,7 +30,7 @@ class HandleUsers:
             self.database.commit()
             return True
         return False
-  
+
 
     def validate_password(self, name: str, password: str):
         """Hakee käyttäjää tietokannasta ja jos löytyy, niin palauttaa käyttäjän id-numeron."""
