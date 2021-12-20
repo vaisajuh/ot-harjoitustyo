@@ -10,6 +10,7 @@ class ShowContacts:
         self.functionality = functionality
         self.db = db
         self.session = session
+        self.update_view = None
         self._show_contacts = None
         self._edit_buttons = None
         self._tree = None
@@ -23,6 +24,8 @@ class ShowContacts:
         self._show_contacts.destroy()
         self._search_contacts.destroy()
         self._edit_buttons.destroy()
+        if self.update_view is not None:
+            self.update_view.destroy()
 
     def _insert_contacts(self):
         for i in self._tree.get_children():
@@ -40,6 +43,8 @@ class ShowContacts:
             row_value = self._tree.focus()
             row_id = int(self._tree.item(row_value)["text"])
             self.db.contacts.delete_contact(row_id)
+            self.update_view.destroy()
+            self.update_view = None
             self.destroy()
             self.start_show_contacts()
         except:
@@ -55,50 +60,52 @@ class ShowContacts:
             pass
 
     def _update_view(self, row, row_id):
-        update_view = Tk()
-        update_view.geometry('300x300')
-        update_view.title('Muokkaa')
+        if self.update_view is None:
+            self.update_view = Tk()
+            self.update_view.geometry('300x300')
+            self.update_view.title('Muokkaa')
         
-        user_entries = ttk.Frame(master=update_view)
-        user_entries.pack(padx=10, pady=10, fill='x', expand=True)
+            user_entries = ttk.Frame(master=self.update_view)
+            user_entries.pack(padx=10, pady=10, fill='x', expand=True)
 
-        name_label = ttk.Label(master=user_entries, text="Nimi")
-        name_label.pack(fill='x', expand=True)
+            name_label = ttk.Label(master=user_entries, text="Nimi")
+            name_label.pack(fill='x', expand=True)
 
-        name = Entry(user_entries)
-        name.insert(END, row[0])
-        name.pack(fill='x', expand=True)
+            name = Entry(user_entries)
+            name.insert(END, row[0])
+            name.pack(fill='x', expand=True)
 
-        address_label = ttk.Label(master=user_entries, text="Osoite")
-        address_label.pack(fill='x', expand=True)
+            address_label = ttk.Label(master=user_entries, text="Osoite")
+            address_label.pack(fill='x', expand=True)
 
-        address = Entry(user_entries)
-        address.insert(END, row[1])
-        address.pack(fill='x', expand=True)
+            address = Entry(user_entries)
+            address.insert(END, row[1])
+            address.pack(fill='x', expand=True)
 
-        email_label = ttk.Label(master=user_entries, text="Email")
-        email_label.pack(fill='x', expand=True)
+            email_label = ttk.Label(master=user_entries, text="Email")
+            email_label.pack(fill='x', expand=True)
 
-        email = Entry(user_entries)
-        email.insert(END, row[2])
-        email.pack(fill='x', expand=True)
+            email = Entry(user_entries)
+            email.insert(END, row[2])
+            email.pack(fill='x', expand=True)
 
-        phone_number_label = ttk.Label(master=user_entries, text="Puhelinnumero")
-        phone_number_label.pack(fill='x', expand=True)
+            phone_number_label = ttk.Label(master=user_entries, text="Puhelinnumero")
+            phone_number_label.pack(fill='x', expand=True)
 
-        number = Entry(user_entries)
-        number.insert(END, row[3])
-        number.pack(fill='x', expand=True)
+            number = Entry(user_entries)
+            number.insert(END, row[3])
+            number.pack(fill='x', expand=True)
 
-        add_button = ttk.Button(
-            master=user_entries, text="Muokkaa", command=lambda: self._update_contact(row_id, name.get(), address.get(), email.get(), number.get()))
-        add_button.pack(fill='x', expand=True, pady=10)
+            add_button = ttk.Button(
+                master=user_entries, text="Muokkaa", command=lambda: self._update_contact(row_id, name.get(), address.get(), email.get(), number.get()))
+            add_button.pack(fill='x', expand=True, pady=10)
 
-        update_view.mainloop()
+            self.update_view.mainloop()
 
     def _update_contact(self, row_id, name, address, email, number):
         self.db.contacts.update_row(row_id, name, address, email, number)
         self.destroy()
+        self.update_view = None
         self.start_show_contacts()
 
     def start_show_contacts(self):
