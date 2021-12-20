@@ -11,7 +11,7 @@ class HandleContacts:
         self.database = database
 
     def get_contacts(self, user_id: int, name:str, address: str, email: str, phone_number: str):
-        """Palauttaa kirjautuneena olevan käyttäjän kontaktit tuplena"""
+        """Palauttaa kirjautuneena olevan käyttäjän kontaktit"""
 
         name = "%" + name + "%"
         address = "%" + address + "%"
