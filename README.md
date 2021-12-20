@@ -6,6 +6,7 @@ Tämän sovelluksen tarkoituksena on tarjota mahdollisuus tallentaa yhteystietoj
 - [Vaatimusmäärittely](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md) <br>
 - [Tuntikirjanpito](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md) <br>
 - [Arkkitehtuurikuvaus](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+- [Testaus](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 ## Releaset
 - [Viikko5](https://github.com/vaisajuh/ot-harjoitustyo/releases/tag/viikko5)
