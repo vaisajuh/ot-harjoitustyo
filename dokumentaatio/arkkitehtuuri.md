@@ -37,7 +37,7 @@ Jos käyttäjällä ei ole ennestään käyttäjätunnusta ja salasanaa, niin se
 ![uusi](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/uusi_kayttaja.png)
 
 ### Lisää kontakti
-Käyttäjän lisätessä kontakteja haetaan ensiksi luokan HandleSession metodin avulla get_session kirjautuneena olevan käyttäjän id-numero. Kun käyttäjä syöttää luokan HandleContacts metodin insert_contact avulla tietoja tietokantaan, niin tämä tämä id-numero annetaan syötteen mukana, jotta kontakti voidaan yksilöidä kirjautuneeseen käyttäjään. 
+Ensiksi luokan <strong>HandleSession</strong> metodin avulla get_session haetaan kirjautuneena olevan käyttäjän id-numero. Luokan <strong>HandleContacts</strong> metodin insert_contact avulla syötetään tietoja tietokantaan, ja tämä tämä id-numero annetaan syötteen mukana, jotta kontakti voidaan yksilöidä kirjautuneeseen käyttäjään.
 ![lisaa](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/lisaa_yhteystieto.png)
 
 ### Kontaktit
