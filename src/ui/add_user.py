@@ -1,4 +1,5 @@
 from tkinter import ttk
+from tkinter.constants import S
 from tkinter.messagebox import showwarning, showinfo
 
 
@@ -36,6 +37,7 @@ class AddUser:
             )
 
     def start_add_user(self):
+        self.root.title("Lisää käyttäjä")
 
         self._insert_user = ttk.Frame(master=self.root)
         self._insert_user.pack(padx=10, pady=10, fill='x', expand=True)

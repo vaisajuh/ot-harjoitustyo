@@ -109,6 +109,7 @@ class ShowContacts:
         self.start_show_contacts()
 
     def start_show_contacts(self):
+        self.root.title("Yhteystiedot")
         self.root.geometry('')
         self._show_contacts = ttk.Frame(master=self.root)
         self._show_contacts.grid()

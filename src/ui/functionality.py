@@ -14,6 +14,7 @@ class Functionality:
 
     def start_functionality(self):
         self.root.geometry('300x300')
+        self.root.title("Toiminnot")
         self._functionality = ttk.Frame(master=self.root)
         self._functionality.pack(padx=10, pady=10, fill='x', expand=True)
 

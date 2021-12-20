@@ -69,6 +69,7 @@ class AddContact:
         return False
 
     def start_add_contact(self):
+        self.root.title("Lisää yhteystieto")
         self._add_contact = ttk.Frame(master=self.root)
         self._add_contact.pack(padx=10, pady=10, fill='x', expand=True)
 

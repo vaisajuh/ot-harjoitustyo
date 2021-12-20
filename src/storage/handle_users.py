@@ -11,7 +11,7 @@ class HandleUsers:
         self.database = database
 
     def _get_user(self, name: str):
-        """Palauttaa parametrina annetun käyttäjän id-numeron """
+        """Palauttaa parametrina annetun käyttäjän tiedot """
 
         get_user = self.database.execute(
             'SELECT id, name, password FROM Users WHERE name like ?', [name]).fetchall()

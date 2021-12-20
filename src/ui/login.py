@@ -41,6 +41,7 @@ class Login:
             self.functionality()
 
     def start_login(self):
+        self.root.title("Kirjaudu")
 
         self._login = ttk.Frame(master=self.root)
         self._login.pack(padx=10, pady=10, fill='x', expand=True)
