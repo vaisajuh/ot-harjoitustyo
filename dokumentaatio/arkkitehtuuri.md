@@ -33,7 +33,7 @@ Ohjelman käynnistyessä käyttäjä kohtaa ensiksi kirjautumisikkunan. Tässä 
 ![kirjautuminen](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/kirjautuminen.png)
 
 ### Uusi käyttäjä
-Jos käyttäjällä ei ole ennestään käyttäjätunnusta ja salasanaa, niin se luodaan erillisessä omassa ikkunassaa syöttämällä haluttu tunnus ja salasana kenttiin. Luokka <strong>HandleUser</strong> asettaa nämä tiedot tietokantaan metodinsa insert_usert avulla, ja palauttaa lopuksi kontrollin käyttöliittymälle.
+Jos käyttäjällä ei ole ennestään käyttäjätunnusta ja salasanaa, niin se luodaan erillisessä omassa ikkunassaa syöttämällä haluttu tunnus ja salasana kenttiin. Luokka <strong>HandleUser</strong> asettaa nämä tiedot tietokantaan metodinsa insert_usert avulla, ja palauttaa lopuksi kontrollin käyttöliittymälle.<br>
 ![uusi](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/uusi_kayttaja.png)
 
 ### Lisää kontakti
