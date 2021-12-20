@@ -1,10 +1,12 @@
 # Arkkitehtuurikuvaus
 ## Käyttöliittymä
-Käyttöliittymällä on neljä näkymää:
+Käyttöliittymällä on neljä päänäkymää:
 - Kirjautuminen
+- Uuden käyttäjän luominen
 - Ohjelman toiminallisuus
 - Yhteystietojen lisääminen
 - Yhteystietojen näyttäminen
+  - Yhteystietojen muokkaamiselle avautuu vielä oma ikkunansa
 
 Sovelluksessa on kerralla näkyvillä yksi näkymä, ja näkymien näyttämisestä vastaa Ui-luokka. Toiminnallisuudesta tarkemmin alla.
 
@@ -27,7 +29,7 @@ Pakkauksessa database sijaitseva <strong>HandleDatabase</strong>-luokka tarjoaa 
 Tässsä osiossa selitettynä ja sekvenssikaavioina kuvattuna ohjelman päätoiminnallisuudet.
 
 ### Kirjautuminen
-Ohjelman käynnistyessä käyttäjä kohtaa ensiksi kirjautumisikkunan. Tässä ikkunassa sijaitseviin kenttiin käyttäjä syöttää käyttäjätunnuksen ja salasanan. Nämä tiedot menevät eteenpäin luokan HandeluUser tarkastettavaksi, ja jos nämä tiedot ovat validit, niin kyseisen käyttäjän id-numero haetaan tietokannasta ja asetetaan HandleSession-luokan metodin add_session avulla istunnon arvoksi. Kun salasana on validoitu, niin käyttäjälle aukeaa ikkuna, jossa ilmenee ohjelman toiminallisuus.
+Ohjelman käynnistyessä käyttäjä kohtaa ensiksi kirjautumisikkunan. Tässä ikkunassa sijaitseviin kenttiin käyttäjä syöttää käyttäjätunnuksen ja salasanan. Nämä tiedot menevät eteenpäin luokan <strong>HandeluUser</strong> tarkastettavaksi, ja jos nämä tiedot ovat validit, niin kyseisen käyttäjän id-numero haetaan tietokannasta ja asetetaan <strong>HandleSession</strong>-luokan metodin add_session avulla istunnon arvoksi. Kun salasana on validoitu, niin käyttäjälle aukeaa ikkuna, jossa ilmenee ohjelman toiminallisuus.
 ![kirjautuminen](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/kirjautuminen.png)
 
 ### Uusi käyttäjä

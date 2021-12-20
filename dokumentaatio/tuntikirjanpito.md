@@ -98,8 +98,8 @@
   </tr>
   <tr>
     <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>2</td>
+    <td>Bugien metsästystä ja korjailua</td>
   </tr>
    <tr>
     <td>-</td>
@@ -112,7 +112,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>41</td>
+    <td>43</td>
     <td>-</td>
   </tr>
 </table>
