@@ -29,11 +29,11 @@ Pakkauksessa database sijaitseva <strong>HandleDatabase</strong>-luokka tarjoaa 
 Tässsä osiossa selitettynä ja sekvenssikaavioina kuvattuna ohjelman päätoiminnallisuudet.
 
 ### Kirjautuminen
-Ohjelman käynnistyessä käyttäjä kohtaa ensiksi kirjautumisikkunan. Tässä ikkunassa sijaitseviin kenttiin käyttäjä syöttää käyttäjätunnuksen ja salasanan. Nämä tiedot menevät eteenpäin luokan <strong>HandeluUser</strong> tarkastettavaksi, ja jos nämä tiedot ovat validit, niin kyseisen käyttäjän id-numero haetaan tietokannasta ja asetetaan <strong>HandleSession</strong>-luokan metodin add_session avulla istunnon arvoksi. Kun salasana on validoitu, niin käyttäjälle aukeaa ikkuna, jossa ilmenee ohjelman toiminallisuus.
+Ohjelman käynnistyessä käyttäjä kohtaa ensiksi kirjautumisikkunan. Tässä ikkunassa sijaitseviin kenttiin käyttäjä syöttää käyttäjätunnuksen ja salasanan. Nämä tiedot menevät eteenpäin luokan <strong>HandleUser</strong> tarkastettavaksi, ja jos nämä tiedot ovat validit, niin kyseisen käyttäjän id-numero haetaan tietokannasta ja asetetaan <strong>HandleSession</strong>-luokan metodin add_session avulla istunnon arvoksi. Kun salasana on validoitu, niin käyttäjälle aukeaa ikkuna, jossa ilmenee ohjelman toiminallisuus.
 ![kirjautuminen](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/kirjautuminen.png)
 
 ### Uusi käyttäjä
-Jos käyttäjällä ei ole ennestään käyttäjätunnusta ja salasanaa, niin se luodaan syöttämällä haluttu käyttäjätunnus ja salasana kirjautumisikkunassa sijaitseviin kenttiin. Tämä prosessi menee saman tarkastuksen läpi kuin olemassaolevan käyttäjän tapauksessa, mutta koska käyttäjää ei löydy tietokannasta, niin se luodaan ja loppu etenee saman kaavan mukaan.
+Jos käyttäjällä ei ole ennestään käyttäjätunnusta ja salasanaa, niin se luodaan erillisessä omassa ikkunassaa syöttämällä haluttu tunnus ja salasana kenttiin. Luokka <strong>HandleUser</strong> asettaa nämä tiedot tietokantaan metodinsa insert_usert avulla, ja palauttaa lopuksi kontrollin käyttöliittymälle.
 ![uusi](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/uusi_kayttaja.png)
 
 ### Lisää kontakti
