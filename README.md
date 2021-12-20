@@ -1,5 +1,5 @@
-# Yhteystiedot-sovellus
-Tämän sovelluksen tarkoituksena on tarjota mahdollisuus tallentaa yhteystietoja tietokantaan. Jokaisella käyttäjälle luodaan ensimmäisen kirjautumisen yhteydessä oma henkilökohtainen tunnus, ja jokaiselle tunnukselle on oma henkilökohtainen lista yhteystiedoista.  
+# ContactsApp
+Tämän sovelluksen tarkoituksena on tarjota mahdollisuus tallentaa yhteystietoja tietokantaan. Jokaisella kirjautuneella käyttäjällä on oma henkilökohtainen lista yhteystiedoista.
 
 ## Dokumentaatio
 - [Käyttöohje](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)<br>
