@@ -19,8 +19,13 @@ Käyttäjä syöttää kenttiin käyttäjänimen ja salasanan kirjautuakseen sis
 ## Käyttäjän lisääminen
 Uusi käyttäjä lisätään seuravaanlaisessa näkymässä <br>
 ![add_user](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/add_user.png)<br>
-Käyttäjä valitsee haluamansa tunnuksen ja salasanan syöttämällä ne kenttiin. Salasanan tulee olla kolmen ja kahdenkymmenen väliltä tai muuten siitä tulee
-ilmoitus. Jos tunnus on jo ennestään olemassa, niin siitä tulee myös ilmoitus
+- Käyttäjä valitsee haluamansa tunnuksen ja salasanan syöttämällä ne kenttiin.
+  - Tunnuksen tulee olla kolmen ja kahdenkymmenen merkin väliltä
+  - Salasanan tulee olla viiden ja kahdenkymmen merkin väliltä
+ 
+Kun tiedot on lisätty kenttiin, niin tiedot saa lisätty tietokantaan painamalla nappia <strong>lisää käyttäjä</strong>. Jos syötteet ovat
+oikean pituisia, niin onnistuneesta lisäyksestä tulee ilmoitus ja kentät tyhjenevät. Vääristä syötteistä tulee myös ilmoitus, ja näitä syötteitä
+on mahdollista vielä muokata. Takaisin kirjautumisikkunaan pääsee painamalla nappia <strong> palaa edelliseen näkymään</strong>
 
 ## Toiminnallisuus
 Sisäänkirjautumisen jälkeen aukeaa seuraavanlainen näkymä:<br>
@@ -40,19 +45,20 @@ Ikkunan toiminallisuus:
  - Nimi
    - Nimen tulee olla vähintään kolme ja enintään kaksikymmentä merkkiä pitkä
  - Osoite
-   - Osoitteen tulee olla vähintään viisi ja enintään kaksikymmentä merkkiä pitkä
+   - Osoitteen tulee olla vähintään kymmenen ja enintään neljäkymmentä merkkiä pitkä
  - Sähköposti
-   - Tulee olla vähintää viisi ja enintään kaksikymmentä merkkiä pitkä ja tulee olla muodossa x@x.com tai tulee ilmoitus
+   - Tulee olla vähintää kymmenen ja enintään neljäkymmentä merkkiä pitkä ja tulee olla muodossa x@x.com
  - Puhelinnumero
-   - Tulee olla viiden ja kahdenkymmenen välillä ja tulee sisältää vain numeroita
+   - Tulee olla kymmenen ja neljänkymmenen merkin välillä ja tulee sisältää vain numeroita
 
-Kun tiedot on lisätty kenttiin, niin tiedot saa lisättyä tietokantaan painamalla nappia <strong>lisää</strong> <br>
+Kun tiedot on lisätty kenttiin, niin tiedot saa lisättyä tietokantaan painamalla nappia <strong>lisää</strong>. Jos lisäys on onnistunut, niin kentät
+tyhjenevät ja onnistuneesta lisäyksestä tulee ilmoitus. Virheellisistä syötteistä tulee ilmoitus ja tiedot jäävät tämän jälkeen muokattavaksi.
 Nappi <strong>palaa edelliseen näkymään</strong> vie nimensä mukaisesti takaisin ikkunaan, jossa näkyy ohjelman toiminallisuus.
  
  ## Yhteystietojen näyttäminen
  Seuraavassa näkymä yhteystietojen näyttämiseen: <br>
  ![show](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/show_contacts.png)<br>
- Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjatuneen käyttäjän henkilökohtaisesta listasta yhteystietoja. Jos käyttäjä haluaa poistaa yhteystiedon, niin se tapahtuu valitsemalla listasta kyseisen tiedon ja painamalla nappia <strong>poista</strong>. Olemassaolevia yhteystietoja voi muokatava valitsemalla listasta kyseisen tiedon painamalla nappia <strong>muokkaa</strong>, jolloin aukea uusi ikkuna muokkausta varten. Edelliseen näkymään
+ Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjautuneen käyttäjän henkilökohtaisesta listasta yhteystietoja. Jos käyttäjä haluaa poistaa yhteystiedon, niin se tapahtuu valitsemalla listasta kyseisen tiedon ja painamalla nappia <strong>poista</strong>. Olemassaolevia yhteystietoja voi muokatava valitsemalla listasta kyseisen tiedon ja painamalla nappia <strong>muokkaa</strong>, jolloin aukea uusi ikkuna muokkausta varten. Muokkaustoimintoa koskee samat säännöt lisäyksen suhteen kuin yhteystietoja lisätessä. Onnistuneen lisäyksen jälkeen muokkausikkuna sulkeutuu. Edelliseen näkymään
  pääsee paimalla nappia <strong>palaa edelliseen näkymään</strong><br>
  
 
