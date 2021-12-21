@@ -22,3 +22,7 @@ Sovellusta on testattu manuaalisesti kehittäjän toimesta
 Sovellus on asennettu ja sitä on testattu [käyttöohjeen](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md) kuvaamalla tavalla linux-ympäristössä.
 
 ### Toiminallisuudet
+[Määrittelydokumentin](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md) ja käyttöohjeen listaamat toiminnalisuudet on käyty läpi. Sovellusta on pyritty testaamaan mahdollisimman laajasti erilaisilla syötteillä, jotta sovelluksessa mahdollisesti olevat virheet löytyisivät.
+
+## Sovellukseen jääneet laatuongelmat
+- 
