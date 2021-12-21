@@ -30,13 +30,14 @@ class AddContact:
                 title="Tiedoksi",
                 message="Yhteystieto lisätty tietokantaan"
             )
+            self.destroy()
+            self.start_add_contact()
         else:
             showwarning(
                 title="Tiedoksi",
                 message="Virheellinen syöte"
             )
-        self.destroy()
-        self.start_add_contact()
+
 
     def start_add_contact(self):
         self.root.title("Lisää yhteystieto")
