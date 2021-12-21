@@ -102,9 +102,9 @@
     <td>Bugien metsästystä ja korjailua</td>
   </tr>
    <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>21.12</td>
+    <td>3</td>
+    <td>Syötteiden tarkistamisen siirtäminen sovelluslogiikasta vastaavien luokkien vastuulle ja näille omat testinsä. Tämän takia myös käyttöliittymää piti muokata jonkun verran. Yhteystietojen näyttämisen yhteydessä olevasta muokkaustoiminnosta myös löytyi ohjelman kaatava virhe, jonka sain korjattua.</td>
   </tr>
    <tr>
     <td>-</td>
@@ -112,7 +112,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>43</td>
+    <td>46</td>
     <td>-</td>
   </tr>
 </table>
