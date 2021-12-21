@@ -13,10 +13,14 @@ Ohjelma käynnistyy komennolla:
 
 ## Kirjautuminen
 Sovellus käynnistyy seuraavanlaiseen näkymään: <br>
-![logio](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/login.png) <br>
-Jos käyttäjällä ei ole ennestään käyttäjänimeä ja salasanaa, niin se luodaan ensimmäisen kirjautumisen yhteydessä. Käyttäjänimen ja salasanen tulee olla kolmen ja
-kahdenkymmenen merkin väliltä tai siitä tulee ilmoitus. Kun käyttäjäprofiili luodaan, niin samalla nimellä ei ole mahdollista enää luoda toista käytäjäprofiilia
-ja väärästä salasanasta tulee ilmoitus.
+![login](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/login.png) <br>
+Käyttäjä syöttää kenttiin käyttäjänimen ja salasanan kirjautuakseen sisään. Jos salasana on väärä, niin tästä tulee ilmoitus
+
+## Käyttäjän lisääminen
+Uusi käyttäjä lisätään seuravaanlaisessa näkymässä <br>
+![add_user](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/add_user.png)<br>
+Käyttäjä valitsee haluamansa tunnuksen ja salasanan syöttämällä ne kenttiin. Salasanan tulee olla kolmen ja kahdenkymmenen väliltä tai muuten siitä tulee
+ilmoitus. Jos tunnus on jo ennestään olemassa, niin siitä tulee myös ilmoitus
 
 ## Toiminnallisuus
 Sisäänkirjautumisen jälkeen aukeaa seuraavanlainen näkymä:<br>
