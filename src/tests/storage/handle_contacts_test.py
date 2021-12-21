@@ -37,26 +37,26 @@ class TestHandleContacts(unittest.TestCase):
     def test_validate_name(self):
         invalid = self.test.contacts.validate_name("a1")
         valid = self.test.contacts.validate_name("aaa")
-        self.assertEqual(invalid, None)
+        self.assertEqual(invalid, False)
         self.assertEqual(valid, True)
     
     def test_validate_address(self):
         invalid = self.test.contacts.validate_address("street")
         valid = self.test.contacts.validate_address("street1234")
-        self.assertEqual(invalid, None)
+        self.assertEqual(invalid, False)
         self.assertEqual(valid, True)
     
     def test_validate_email(self):
         invalid_length = invalid = self.test.contacts.validate_email("1")
         invalid = self.test.contacts.validate_email("@email....")
         valid = self.test.contacts.validate_email("email@email.com")
-        self.assertEqual(invalid_length, None)
-        self.assertEqual(invalid, None)
+        self.assertEqual(invalid_length, False)
+        self.assertEqual(invalid, False)
         self.assertEqual(valid, True)
 
     
     def test_validate_phone_number(self):
         invalid = self.test.contacts.validate_phone_number("123456789K")
         valid = self.test.contacts.validate_phone_number("0123456789")
-        self.assertEqual(invalid, None)
+        self.assertEqual(invalid, False)
         self.assertEqual(valid, True)

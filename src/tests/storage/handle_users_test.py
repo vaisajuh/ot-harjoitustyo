@@ -28,5 +28,5 @@ class TestHandleUsers(unittest.TestCase):
     def test_validate_length(self):
         invalid_length = self.test.users.validate_length("ab", "abcd")
         valid_length = self.test.users.validate_length("abc", "abcde")
-        self.assertEqual(invalid_length, None)
+        self.assertEqual(invalid_length, False)
         self.assertEqual(valid_length, True)
