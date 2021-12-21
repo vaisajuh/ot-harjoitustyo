@@ -1,4 +1,4 @@
-from tkinter.messagebox import showinfo
+from tkinter.messagebox import showinfo, showwarning
 from tkinter import ttk
 
 
@@ -18,10 +18,11 @@ class AddContact:
         self._add_contact.destroy()
 
     def _validate_insert_contact(self):
-        validate_length = self._validate_length()
-        validate_email = self._validate_email()
-        validate_number = self._validate_number()
-        if validate_length and validate_email and validate_number == True:
+        validate_name = self.db.contacts.validate_name(self._name_entry.get())
+        validate_address = self.db.contacts.validate_address(self._address_entry.get())
+        validate_email = self.db.contacts.validate_email(self._email_entry.get())
+        validate_number = self.db.contacts.validate_phone_number(self._phone_number_entry.get())
+        if validate_name and validate_address and validate_email and validate_number == True:
             current_session = self.session.get_session()
             self.db.contacts.insert_contact(current_session, self._name_entry.get(
             ), self._address_entry.get(), self._email_entry.get(), self._phone_number_entry.get())
@@ -29,44 +30,13 @@ class AddContact:
                 title="Tiedoksi",
                 message="Yhteystieto lisätty tietokantaan"
             )
+        else:
+            showwarning(
+                title="Tiedoksi",
+                message="Virheellinen syöte"
+            )
         self.destroy()
         self.start_add_contact()
-
-    def _validate_length(self):
-        if len(self._name_entry.get()) not in range(3, 20) or\
-                len(self._address_entry.get()) not in range(5, 20) or\
-            len(self._phone_number_entry.get()) not in range(5, 20) or\
-                len(self._email_entry.get()) not in range(5, 20):
-            showinfo(
-                title="Tiedoksi",
-                message="Syötteen tulee olla neljän ja neljänkymmenen väliltä"
-            )
-            return False
-        return True
-
-    def _validate_email(self):
-        try:
-            first_letter = self._email_entry.get()[0]
-            if '@' and "." not in self._email_entry.get()\
-                    or first_letter == "@":
-                showinfo(
-                    title="Tiedoksi",
-                    message="Sähköpostin tulee muodossa x@x.x"
-                )
-                return False
-        except:
-            pass
-        return True
-
-    def _validate_number(self):
-        for character in self._phone_number_entry.get():
-            if character.isdigit():
-                return True
-        showinfo(
-            title="Tiedoksi",
-            message="Puhelinnumerossa tulee olla vain numeroita"
-        )
-        return False
 
     def start_add_contact(self):
         self.root.title("Lisää yhteystieto")

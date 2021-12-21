@@ -1,6 +1,7 @@
-from tkinter import Entry, ttk
+from tkinter import Entry, PhotoImage, ttk
 from tkinter.constants import CENTER, END
 from tkinter import Tk
+from tkinter.messagebox import showinfo, showwarning
 
 
 
@@ -103,10 +104,20 @@ class ShowContacts:
             self.update_view.mainloop()
 
     def _update_contact(self, row_id, name, address, email, number):
-        self.db.contacts.update_row(row_id, name, address, email, number)
-        self.destroy()
-        self.update_view = None
-        self.start_show_contacts()
+        validate_name = self.db.contacts.validate_name(name)
+        validate_address = self.db.contacts.validate_address(address)
+        validate_email = self.db.contacts.validate_email(email)
+        validate_number = self.db.contacts.validate_phone_number(number)
+        if validate_name and validate_address and validate_email and validate_number == True:
+            self.db.contacts.update_row(row_id, name, address, email, number)
+            self.destroy()
+            self.update_view = None
+            self.start_show_contacts()
+        else:
+            showwarning(
+                title="Tiedoksi",
+                message="Virheellinen syöte"
+            )
 
     def start_show_contacts(self):
         self.root.title("Yhteystiedot")

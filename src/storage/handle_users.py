@@ -31,7 +31,6 @@ class HandleUsers:
             return True
         return False
 
-
     def validate_password(self, name: str, password: str):
         """Hakee käyttäjää tietokannasta ja jos löytyy, niin palauttaa käyttäjän id-numeron."""
 
@@ -43,3 +42,8 @@ class HandleUsers:
             if get_password == password:
                 return int(get_id)
         return False
+    
+    def validate_length(self, name: str, password: str):
+        """Tarkastaa käyttäjän syötteen pituuden oikeellisuuden"""
+        if len(name) in range(3, 20) and len(password) in range(5, 20):
+            return True

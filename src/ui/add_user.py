@@ -16,8 +16,9 @@ class AddUser:
         self._insert_user.destroy()
 
     def _add_user(self):
-        if len(self._username_entry.get()) in range(3, 20) and\
-                len(self._password_entry.get()) in range(3, 20):
+        validate = self.db.users.validate_length(self._username_entry.get(),\
+            self._password_entry.get())
+        if validate is True:
             exists = self.db.users.insert_user(self._username_entry.get(), self._password_entry.get())
             if exists is True:
                 showinfo(
@@ -28,12 +29,13 @@ class AddUser:
                 showwarning(
                 title="Tiedoksi",
                 message="Käyttäjä on jo ennestään tietokannassa"
-                ) 
+                )
+            self.destroy()
+            self.start_add_user()
         else:
             showwarning(
                 title="Tiedoksi",
-                message="Käyttäjänimen ja salasanan tulee olla neljän ja "
-                "kahdenkymmenen merkin väliltä"
+                message="Virheellinen syöte"
             )
 
     def start_add_user(self):

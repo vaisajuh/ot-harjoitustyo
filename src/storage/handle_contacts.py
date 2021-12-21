@@ -53,3 +53,29 @@ class HandleContacts:
         self.database.execute('UPDATE Contacts SET name = ?, address = ?, email = ?,'
         ' phonenumber = ? WHERE id = ?',[name, address, email, phone_number, row_id])
         self.database.commit()
+    
+    def validate_name(self, name: str):
+        """Tarkastaa käyttäjän syöttämän nimen pituuden oikeellisuuden"""
+        if len(name) in range(3,20):
+            return True
+    
+    def validate_address(self, address: str):
+        """Tarkastaa käyttäjän syöttämän osoitteen pituuden oikeellisuuden"""
+        if len(address) in range(10, 40):
+            return True
+    
+    def validate_email(self, email: str):
+        """Tarkastaa käyttäjän syöttämän sähköpostiosoitteen pituuden oikeellisuuden"""
+        if len(email) in range(10,40):
+            first_letter = email[0]
+            last_letter = email[-1]
+            if '@' and "." in email\
+                and first_letter != "@" and last_letter != ".":
+                return True
+    
+    def validate_phone_number(self, phone_number: str):
+        """Tarkastaa käyttäjän syöttämän puhelinnumeron pituuden oikeellisuuden"""
+        if len(phone_number) in range(10,40) and\
+             phone_number.isdecimal():
+             return True
+    

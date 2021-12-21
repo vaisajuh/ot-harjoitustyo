@@ -25,4 +25,8 @@ class TestHandleUsers(unittest.TestCase):
         self.assertEqual(correct_pass, 1)
         self.assertEqual(new_user, False)
     
-
+    def test_validate_length(self):
+        invalid_length = self.test.users.validate_length("ab", "abcd")
+        valid_length = self.test.users.validate_length("abc", "abcde")
+        self.assertEqual(invalid_length, None)
+        self.assertEqual(valid_length, True)
