@@ -44,8 +44,9 @@ class ShowContacts:
             row_value = self._tree.focus()
             row_id = int(self._tree.item(row_value)["text"])
             self.db.contacts.delete_contact(row_id)
-            self.update_view.destroy()
-            self.update_view = None
+            if self.update_view is not None:
+                self.update_view.destroy()
+                self.update_view = None
             self.destroy()
             self.start_show_contacts()
         except:
