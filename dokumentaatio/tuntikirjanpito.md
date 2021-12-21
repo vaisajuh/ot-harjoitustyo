@@ -104,9 +104,19 @@
    <tr>
     <td>21.12</td>
     <td>3</td>
-    <td>Syötteiden tarkistamisen siirtäminen sovelluslogiikasta vastaavien luokkien vastuulle ja näille omat testinsä. Tämän takia myös käyttöliittymää piti muokata jonkun verran. Yhteystietojen näyttämisen yhteydessä olevasta muokkaustoiminnosta myös löytyi ohjelman kaatava virhe, jonka sain korjattua.</td>
+    <td>Syötteiden tarkistamisen siirtäminen sovelluslogiikasta vastaavien luokkien vastuulle ja näille omat testinsä. Yhteystietojen näyttämisen yhteydessä olevasta muokkaustoiminnosta myös löytyi ohjelman kaatava virhe, jonka sain korjattua.</td>
   </tr>
    <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+   <tr>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
