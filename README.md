@@ -1,6 +1,9 @@
 # ContactsApp
 Tämän sovelluksen tarkoituksena on tarjota mahdollisuus tallentaa yhteystietoja tietokantaan. Jokaisella kirjautuneella käyttäjällä on oma henkilökohtainen lista yhteystiedoista.
 
+## Huomio python-versiosta
+Sovellus on testattu python-versiolla <code>3.8</code> ja sovelluksen toimintaa vanhemmilla versioilla ei voida taata. 
+
 ## Dokumentaatio
 - [Käyttöohje](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)<br>
 - [Vaatimusmäärittely](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md) <br>
