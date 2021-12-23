@@ -107,9 +107,9 @@
     <td>Syötteiden tarkistamisen siirtäminen sovelluslogiikasta vastaavien luokkien vastuulle ja näille omat testinsä. Yhteystietojen näyttämisen yhteydessä olevasta muokkaustoiminnosta myös löytyi ohjelman kaatava virhe, jonka sain korjattua.</td>
   </tr>
    <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+    <td>23.12</td>
+    <td>2</td>
+    <td>Muokkaustoiminnosta löytyi jälleen virhe, jonka sain korjattua. Parannuksia tietoturvaan niin, että salasanoista luodaan nyt hajautusarvo, joka tallennetaan tietokantaan.</td>
   </tr>
    <tr>
     <td>-</td>
@@ -122,7 +122,7 @@
     <td>-</td>
   </tr>
     <td>yht</td>
-    <td>46</td>
+    <td>48</td>
     <td>-</td>
   </tr>
 </table>
