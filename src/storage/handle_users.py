@@ -1,3 +1,4 @@
+import hashlib
 
 class HandleUsers:
     """Luokka hallinnoi tietokantaan kirjautuneita käyttäjiä
@@ -22,6 +23,7 @@ class HandleUsers:
 
         name = name.lower()
         password = password.lower()
+        password = self._create_hash(password)
         count = self.database.execute(
             'SELECT COUNT(*) FROM Users WHERE name LIKE ?', [name]).fetchone()[0]
         if count == 0:
@@ -39,6 +41,7 @@ class HandleUsers:
         if count == 1:
             get_id = self._get_user(name)[0]
             get_password = self._get_user(name)[2]
+            password = self._create_hash(password)
             if get_password == password:
                 return int(get_id)
         return False
@@ -49,3 +52,8 @@ class HandleUsers:
         if len(name) in range(3, 20) and len(password) in range(5, 20):
             return True
         return False
+    
+    def _create_hash(self, password: str):
+        hash = hashlib.md5(password.encode())
+        password = hash.hexdigest()
+        return password

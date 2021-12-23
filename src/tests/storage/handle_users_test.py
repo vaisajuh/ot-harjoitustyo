@@ -1,5 +1,7 @@
 import unittest
+
 from database.handle_database import HandleDatabase
+
 
 
 class TestHandleUsers(unittest.TestCase):
@@ -13,8 +15,9 @@ class TestHandleUsers(unittest.TestCase):
         add_user = self.test.users.insert_user("michelin", "1234")
         name = get_user[1]
         password = get_user[2]
+        hash = self.test.users._create_hash("1234")
         self.assertEqual(name, "michelin")
-        self.assertEqual(password, "1234")
+        self.assertEqual(password, hash)
         self.assertEqual(add_user, False)
 
     def test_validate_password(self):

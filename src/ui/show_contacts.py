@@ -1,5 +1,5 @@
 from tkinter import Entry, PhotoImage, ttk
-from tkinter.constants import CENTER, END
+from tkinter.constants import CENTER, DISABLED, END
 from tkinter import Tk
 from tkinter.messagebox import showinfo, showwarning
 
@@ -66,6 +66,7 @@ class ShowContacts:
             self.update_view = Tk()
             self.update_view.geometry('300x300')
             self.update_view.title('Muokkaa')
+            self.update_view.resizable(False, False)
         
             user_entries = ttk.Frame(master=self.update_view)
             user_entries.pack(padx=10, pady=10, fill='x', expand=True)
@@ -102,6 +103,7 @@ class ShowContacts:
                 master=user_entries, text="Muokkaa", command=lambda: self._update_contact(row_id, name.get(), address.get(), email.get(), number.get()))
             add_button.pack(fill='x', expand=True, pady=10)
 
+            self.update_view.protocol("WM_DELETE_WINDOW", DISABLED)
             self.update_view.mainloop()
 
     def _update_contact(self, row_id, name, address, email, number):
