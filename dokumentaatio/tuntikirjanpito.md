@@ -101,28 +101,29 @@
     <td>2</td>
     <td>Bugien metsästystä ja korjailua</td>
   </tr>
-   <tr>
+  <tr>
     <td>21.12</td>
     <td>3</td>
     <td>Syötteiden tarkistamisen siirtäminen sovelluslogiikasta vastaavien luokkien vastuulle ja näille omat testinsä. Yhteystietojen näyttämisen yhteydessä olevasta muokkaustoiminnosta myös löytyi ohjelman kaatava virhe, jonka sain korjattua.</td>
   </tr>
-   <tr>
+  <tr>
     <td>23.12</td>
     <td>2</td>
     <td>Muokkaustoiminnosta löytyi jälleen virhe, jonka sain korjattua. Parannuksia tietoturvaan niin, että salasanoista luodaan nyt hajautusarvo, joka tallennetaan tietokantaan.</td>
   </tr>
-   <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
+  <tr>
+    <td>26.12</td>
+    <td>2</td>
+    <td>Raporttien kirjoittelua ja koodin parantelua</td>
   </tr>
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
   </tr>
-    <td>yht</td>
-    <td>48</td>
+  <tr>
+    <td><strong>yht</strong></td>
+    <td><strong>50<s/strong></td>
     <td>-</td>
   </tr>
 </table>
