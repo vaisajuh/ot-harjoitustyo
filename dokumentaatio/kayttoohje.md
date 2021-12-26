@@ -60,8 +60,21 @@ Nappi <strong>palaa edelliseen näkymään</strong> vie nimensä mukaisesti taka
  ## Yhteystietojen näyttäminen
  Seuraavassa näkymä yhteystietojen näyttämiseen: <br>
  ![show](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/show_contacts.png)<br>
- Ikkunassa oikealla hakutoiminto, jolla voi hakea sisäänkirjautuneen käyttäjän henkilökohtaisesta listasta yhteystietoja. Jos käyttäjä haluaa poistaa yhteystiedon, niin se tapahtuu valitsemalla listasta kyseisen tiedon ja painamalla nappia <strong>poista</strong>. Olemassaolevia yhteystietoja voi muokatava valitsemalla listasta kyseisen tiedon ja painamalla nappia <strong>muokkaa</strong>, jolloin aukea uusi ikkuna muokkausta varten. Muokkaustoimintoa koskee samat säännöt lisäyksen suhteen kuin yhteystietoja lisätessä. Onnistuneen lisäyksen jälkeen muokkausikkuna sulkeutuu. Edelliseen näkymään
- pääsee paimalla nappia <strong>palaa edelliseen näkymään</strong><br>
+ Ikkunan toiminallisuus
+ - Poista
+   - Käyttäjä valitsee poistettavan yhteystiedon listasta ja poistaa sen nappia painamalla
+ - Muokkaa
+   - Käyttäjä valitsee muokattavan yhteystiedon listasta ja nappia painamalla avautuu uusi ikkuna muokkausta varten
+   - Muokkausta koskee samat säännöt kuin yhteystietoja lisätessä
+   - Muokkauksen ollessa valmis painetaan nappia muokkaa
+     - Jos muokkaus on onnistunut, niin ikkuna sulkeutuu ja yhtestieto päivittyy
+     - Virheellisistä syötteistä tulee ilmoitus ja käyttäjällä on mahdollisuus korjata syötteet
+ - Hae
+   - Käyttäjä voi hakea yhteystietoja listasta samoilla arvoilla kuin yhtestietoja lisätessä
+     - Haku on säädetty hakemaan kaikki yhtestiedot, jossa on samankaltaisia sanoja
+       - Tämä tarkoittaa, että jos yksikin kenttä täsmää haettavaan sanaa, niin haetaan samankaltaiset sanat. Tyhjät hakusanat täsmäävät kaikkien yhteystietojen kanssa
+ - Palaa edelliseen näkymään
+   - Vie käyttäjän takaisin näkymään, jossa ilmenee ohjelman toiminnallisuus
  
 
 
