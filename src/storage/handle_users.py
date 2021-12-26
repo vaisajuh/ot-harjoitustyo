@@ -56,6 +56,7 @@ class HandleUsers:
     def _create_hash(self, password: str):
         """Luo hajautusarvon salanan suojaamiseksi"""
         
-        hash = hashlib.md5(password.encode())
+        hash = hashlib.sha3_512(password.encode())
         password = hash.hexdigest()
+        print(password)
         return password
