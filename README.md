@@ -23,4 +23,4 @@ Sovellus on testattu python-versiolla <code>3.8</code> ja sovelluksen toimintaa 
 - Ohjelma käynnistyy komennolla: <h3><pre>poetry run invoke start</pre></h3>
 - Testit voi jaa komennolla: <h3><pre>poetry run invoke test</pre></h3>
 - Testikattavuusraportin saa komennolla: <h3><pre>poetry run invoke coverage-report</pre></h3>
-- Koodin oikean muotoilun voi tarkistaa komennolla: <h3><pre>poetry run invoke lint</pre></h3>
+- Tiedoston [.pylintrc](https://github.com/vaisajuh/ot-harjoitustyo/blob/master/.pylintrc) määrittelemät tarkistukset voi suorittaa komennolla: <h3><pre>poetry run invoke lint</pre></h3>
