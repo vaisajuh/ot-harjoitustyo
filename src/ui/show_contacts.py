@@ -1,7 +1,7 @@
-from tkinter import Entry, PhotoImage, ttk
+from tkinter import Entry, ttk
 from tkinter.constants import CENTER, DISABLED, END
 from tkinter import Tk
-from tkinter.messagebox import showinfo, showwarning
+from tkinter.messagebox import showwarning
 
 
 

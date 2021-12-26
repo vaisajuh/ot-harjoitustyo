@@ -52,11 +52,10 @@ class HandleUsers:
         if len(name) in range(3, 20) and len(password) in range(5, 20):
             return True
         return False
-    
+
     def _create_hash(self, password: str):
         """Luo hajautusarvon salanan suojaamiseksi"""
-        
-        hash = hashlib.sha3_512(password.encode())
-        password = hash.hexdigest()
-        print(password)
+
+        password = hashlib.sha3_512(password.encode())
+        password = password.hexdigest()
         return password

@@ -1,8 +1,6 @@
 import csv
 from config import DATABASE_TABLES_PATH
 
-"""Moduuli, jonka tehtävänä lukea tietokantaulut csv-tiedosta ja luoda niistä
-palautettava lista"""
 
 database_file = []
 
