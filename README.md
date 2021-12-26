@@ -14,6 +14,7 @@ Sovellus on testattu python-versiolla <code>3.8</code> ja sovelluksen toimintaa 
 ## Releaset
 - [Viikko5](https://github.com/vaisajuh/ot-harjoitustyo/releases/tag/viikko5)
 - [Viikko6](https://github.com/vaisajuh/ot-harjoitustyo/releases/tag/viikko6)
+- [Loppupalautus](https://github.com/vaisajuh/ot-harjoitustyo/releases/tag/loppupalatus)
 
 ## Sovelluksen asennus
 - Riippuvuudet asennetaan komennolla: <h3><pre>poetry install</pre></h3>
