@@ -1,8 +1,10 @@
 import csv
 from config import DATABASE_TABLES_PATH
 
-database_file = []
+"""Moduuli, jonka tehtävänä lukea tietokantaulut csv-tiedosta ja luoda niistä
+palautettava lista"""
 
+database_file = []
 
 def init_file():
     with open(DATABASE_TABLES_PATH, encoding='utf-8') as tables:
