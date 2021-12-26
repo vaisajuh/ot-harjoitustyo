@@ -1,4 +1,6 @@
 # Käyttöohje
+## Viimesin release
+Ohjelman viimeisin [release](https://github.com/vaisajuh/ot-harjoitustyo/releases/tag/loppupalatus) on saatavilla valitsemalla _assets_-osion alta _source_-code.
 
 ## Konfigurointi
 Talletukseen käytettävää tietokantatiedoston nimeä voi muuttaa, ja se sijaitsee käynnistyskamistossa .env-tiedossa. Tiedosto luodaan automaattisest kansion src 
