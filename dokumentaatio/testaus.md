@@ -8,7 +8,7 @@ Sovelluslogiikasta vastaa luokat <code>HandleUsers</code> ja <code>HandleContact
 -luokalla. <code>HandleUsers</code>-luokka saa parametrinaan <code>HandleDatabase</code>-luokan, jonka kautta voidaan testata tämän luokan logiikkaa. <code>HandleContacts</code>-luokkaa testataan <code>TestHandleContact</code>-luokalla, ja myös tämä luokka saa paremetrinaan <code>HandleDataba</code>-luokan, jonka kautta voidaan testata kyseisen luokan logiikkaa.
 
 ### Tietokantayhteys
-<code>HandleDatabase</code>-luokkaa testataan luokan <code>TestHandleUsers</code> avulla.
+<code>HandleDatabase</code>-luokkaa testataan luokan <code>TestHandleUsers</code> avulla. Tämä luokka tulee jollain tapaa testatuksi jo ohjelman päälogiikkaa testaavien luokkien yhteydessä, mutta nähdäkseni tätä on vielä järkevää testata erikseen omalla luokalla.
 
 
 ### Testauskattavauus
@@ -26,3 +26,4 @@ Sovellus on asennettu ja sitä on testattu [käyttöohjeen](https://github.com/v
 
 ## Sovellukseen jääneet laatuongelmat
 - Syötteiden tarkistuksessa olisi vielä varmasti säätämistä
+- Hakutoiminto voisi olla säädetty tarkemmaksi
